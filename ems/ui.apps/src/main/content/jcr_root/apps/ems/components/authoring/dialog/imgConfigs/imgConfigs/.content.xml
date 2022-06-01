@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Image Configs"
+    sling:resourceType="granite/ui/components/coral/foundation/container"
+    margin="{Boolean}true">
+    <items jcr:primaryType="nt:unstructured">
+        <columns
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+            margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+                <column
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                    <items jcr:primaryType="nt:unstructured">
+                        <imgSettings
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Image Settings"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <imgPath
+                                    granite:class="smart-crop-img"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                    fieldLabel="Image Path"
+                                    name="./imgPath"
+                                    rootPath="/content/dam"/>
+                                <mobileImgPath
+                                    granite:class="smart-crop-mobile-img"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                    fieldLabel="Mobile Image  (Optional, use smart crop instead)"
+                                    name="./mobileImgPath"
+                                    rootPath="/content/dam"/>
+                                <altText
+                                    granite:class="alt-text"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Alt Text"
+                                    name="./altText"/>
+                            </items>
+                        </imgSettings>
+                        <imagePresetSettings
+                            granite:class="horizontalLayout"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Image Presets Settings"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <imagepreset
+                                    granite:class="horizontalLeft"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    fieldDescription="Image Preset to use when rendering image."
+                                    fieldLabel="Desktop Image Preset"
+                                    id="imagePreset"
+                                    name="./s7ImagePreset">
+                                    <datasource
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="dam/components/scene7/common/imagepresetdatasource"/>
+                                </imagepreset>
+                                <mobileImagepreset
+                                    granite:class="horizontalRight"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    fieldDescription="Image Preset to use when rendering image."
+                                    fieldLabel="Mobile Image Preset"
+                                    id="imagePreset"
+                                    name="./s7MobileImagePreset">
+                                    <datasource
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="dam/components/scene7/common/imagepresetdatasource"/>
+                                </mobileImagepreset>
+                            </items>
+                        </imagePresetSettings>
+                        <smartCropSettings
+                            granite:class="horizontalLayout"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Smart Crop Settings"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <cropProfiles
+                                    granite:class="smart-crop-profile"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    fieldLabel="Desktop Crop Profile"
+                                    name="./s7CropProfile">
+                                    <datasource
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="acs-commons/components/utilities/genericlist/datasource"
+                                        path="/etc/acs-commons/lists/anthem/smart-crop/www-sites/desktop-crop-dimensions"/>
+                                </cropProfiles>
+                                <mobileCropProfile
+                                    granite:class="smart-crop-mobile-profile"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    fieldLabel="Mobile Crop Profile"
+                                    name="./s7MobileCropProfile">
+                                    <datasource
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="acs-commons/components/utilities/genericlist/datasource"
+                                        path="/etc/acs-commons/lists/anthem/smart-crop/www-sites/mobile-crop-dimensions"/>
+                                </mobileCropProfile>
+                            </items>
+                        </smartCropSettings>
+                        <dmParamsSettings
+                            granite:class="horizontalLayout"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Additional Image  Modifiers"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <isTrasparentImg
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                    name="./isTransparentImage"
+                                    text="Is Transparent Image?"
+                                    uncheckedValue="false"
+                                    value="true"/>
+                                <cropProfiles
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="DM Query params"
+                                    name="./s7QueryParams"/>
+                            </items>
+                        </dmParamsSettings>
+                    </items>
+                </column>
+            </items>
+        </columns>
+    </items>
+</jcr:root>

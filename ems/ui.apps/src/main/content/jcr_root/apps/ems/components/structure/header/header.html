@@ -1,0 +1,28 @@
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='anthem.ems.header'}">
+</sly>
+
+<header class="hdrCont link-fw-container">
+	<div class="link-fwc-container hdrCont-Wrapper">
+
+		<sly data-sly-test="${properties.firstHeaderLogo}">
+            <div class="hdrCont-logo">
+                <img src="${properties.firstHeaderLogo}" alt="AnthemLinkLogo1" />
+            </div>
+		</sly>
+
+
+		<sly data-sly-test="${properties.firstHeaderLogo && properties.secondHeaderLogo}">
+			<span class="hdrCont-splitLine"></span>
+		</sly>
+
+
+		<sly data-sly-test="${properties.secondHeaderLogo}">
+            <div class="hdrCont-logo">
+              <img src="${properties.secondHeaderLogo}" alt="AnthemLinkLogo2"
+              />
+            </div>
+		</sly>
+	</div>
+</header>

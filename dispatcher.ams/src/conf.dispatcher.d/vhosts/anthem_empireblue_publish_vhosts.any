@@ -1,0 +1,8 @@
+# Put hostnames that would be honored for publish blob matching works.
+www.empireblue.com
+empireblue.com
+dev.aem.empireblue.com
+qa.aem.empireblue.com
+uat.aem.empireblue.com
+stage.aem.empireblue.com
+prod.aem.empireblue.com

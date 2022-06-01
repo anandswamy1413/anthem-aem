@@ -1,0 +1,36 @@
+<sly
+  data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+  data-sly-call="${clientlib.all @ categories='anthem.ems.imageWithText'}"
+/>
+
+<sly data-sly-use.imageWithTextModel="com.anthem.ems.core.models.ImageWithTextModel" />
+
+    <div class="text-imageBg link-fw-container${imageWithTextModel.bgColor ? ' greyBg' : ''}${imageWithTextModel.dynamicAccessText ? ' dynamic-access-text' : ''}">
+
+      <div class="text-imageCont link-fwc-container${imageWithTextModel.textAlignment ? ' align-image-right' : ''}">
+        <picture class="img-wrapper">
+          <source
+			media="(max-width:767px)"
+			srcset="${imageWithTextModel.imageMap['sm']}"
+          />
+          <source
+            media="(min-width:768px)"
+            srcset="${imageWithTextModel.imageMap['lg']}"
+          />
+          <img
+            src="${imageWithTextModel.imgPath}"
+            alt="Image"
+            role="presentation"
+          />
+        </picture>
+
+        <div class="text-wrapper" data-content ="${properties.text}">
+          <h2>${imageWithTextModel.title}</h2>
+          ${properties.text @ context = 'html'}
+          <p class="image-text-disclaimer">
+            ${properties.textDisclaimer @ context = 'html'}
+          </p>
+        </div>
+      </div>
+    </div>
+

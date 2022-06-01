@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:lastModified="{Date}2022-02-18T16:52:11.927+05:30"
+        cq:lastModifiedBy="admin"
+        cq:templateType="/conf/ems/settings/wcm/template-types/xf"
+        jcr:description="Anthem EMS Experience Fragment Template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Anthem EMS XF Web Variation"
+        status="enabled"/>
+</jcr:root>

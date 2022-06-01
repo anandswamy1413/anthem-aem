@@ -1,0 +1,2 @@
+rteiconpickerhtml.js
+RTE.CQIconPickerPlugin.js

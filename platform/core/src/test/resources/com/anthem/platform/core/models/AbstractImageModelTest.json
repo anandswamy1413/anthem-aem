@@ -1,0 +1,6 @@
+{
+	"abstract": {
+		"jcr:primaryType": "nt:unstructured",
+		"altText": "alt"
+	}
+}

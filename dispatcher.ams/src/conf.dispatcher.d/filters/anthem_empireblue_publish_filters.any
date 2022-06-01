@@ -1,0 +1,36 @@
+# Empire Blue Custom rules
+
+# Content Rules [Added by HM]
+/0401 { /type "allow" /extension '(css|eot|gif|ico|jpeg|jpg|js|gif|pdf|png|svg|swf|ttf|woff|woff2|html)' /path "/content/empire-blue/*" } 
+/0402 { /type "allow" /extension '(css|eot|gif|ico|jpeg|jpg|js|gif|pdf|png|svg|swf|ttf|woff|woff2|html)' /path "/content/empireblue/*" } 
+/0403 { /type "allow" /extension "json" /selectors "(model)" /path "/content/empire-blue/*" }
+/0404 { /type "allow" /extension "json" /selectors "(model)" /path "/content/empireblue/*" }
+/0405 { /type "allow" /extension "json" /selectors "(model)" /path "/content/anthem/*" }
+/0406 {/type "allow" /method '(HEAD)' /url "/content/*"}
+
+# Dam Rules [Added by HM]
+/0421 {/type "allow" /method '(GET)' /url "/content/dam/empire-blue/*"}
+/0422 {/type "allow" /method '(GET)' /url "/content/dam/empire-blue/*.transform/*"} # Rule for Named transform servlet
+/0423 {/type "allow" /extension '(json|jfif|docx|doc|pdf|xls|xlsx|ppt|pptx)' /path "/content/dam/empire-blue/*" }  # Additional extensions
+/0424 {/type "allow" /method '(GET)' /url "/content/dam/anthem/*"}
+/0425 {/type "allow" /method '(GET)' /url "/content/dam/anthem/*.transform/*"} # Rule for Named transform servlet
+/0426 {/type "allow" /extension '(json|jfif|docx|doc|pdf|xls|xlsx|ppt|pptx)' /path "/content/dam/anthem/*" }  # Additional extensions
+
+# Servlet Rules [Added by HM]
+/0431 {/type "allow" /method '(GET|POST)' /url "/content/anthem/*/servlets/*" }
+
+# Miscellaneous Rules [Added by HM]
+/0451 {/type "allow" /url "/content/dam/empire-blue/*/robots.txt" } # SE Crawling
+/0452 { /type "allow" /url "/etc/designs/*" } # Allow brightcove player JS 
+/0453 { /type "allow" /url "/content/*/*.sitemap.xml" }
+/0454 { /type "allow" /url "/content/*/*.sitemapfeed.xml" }
+
+/0105 {/type "allow" /method '(GET|POST)' /url "*/j_security_check/*" }
+/0106 {/type "allow" /method '(GET|POST)' /url "*/j_security_check" }
+/0107 { /type "allow" /method "GET" /extension "html" /url "/system/sling/logout.html*" }
+/0108 {/type "allow" /method '(GET|POST)' /url "/bin/*" }
+
+#Allow DAM Paths for covid19 Microsite and Gatewaytoanthem
+/0109 {/type "allow" /method '(GET)' /url "/content/dam/covid19/*"}
+/0110 {/type "allow" /method '(GET)' /url "/content/dam/covid19/*.transform/*"}
+/0111 { /type "allow" /method "GET" /query "q=*" }

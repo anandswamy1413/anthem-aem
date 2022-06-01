@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Icon Picker"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[rte.dialog.icon-picker.custom.css]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+        <items jcr:primaryType="nt:unstructured">
+            <column1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <iconPath
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Icon Path"
+                        name="./iconPath"
+                        rootPath="/content/dam">
+                        <datasource
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="acs-commons/components/utilities/genericlist/datasource"
+                            path="/etc/acs-commons/lists/anthem/fwc-icons"/>
+                    </iconPath>
+                    <addSeparator
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Add Horizontal Separator (Lists only)"
+                        name="./addSeparator">
+                        <items jcr:primaryType="nt:unstructured">
+                            <none
+                                jcr:primaryType="nt:unstructured"
+                                text=""
+                                value=""/>
+                            <bottomSeparator
+                                jcr:primaryType="nt:unstructured"
+                                text="Horizontal Separator"
+                                value="true"/>
+                        </items>
+                    </addSeparator>
+                    <picker
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+                        autogenerateColors="off"
+                        fieldLabel="Color Variant"
+                        name="./color"
+                        showDefaultColors="{Boolean}false"
+                        showProperties="{Boolean}false">
+                        <datasource
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="acs-commons/components/utilities/genericlist/datasource"
+                            path="/etc/acs-commons/lists/anthem/fwc-colors"/>
+                    </picker>
+                    <ariaLabel
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Aria Label (Individual icon only)"
+                        name="./ariaLabel"/>
+                </items>
+            </column1>
+        </items>
+    </content>
+</jcr:root>

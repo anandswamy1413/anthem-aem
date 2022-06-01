@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Manage Akamai Flush commands"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Akamai CCU Admin"
+    href="/conf/anthem/akamai/akamaiflush.html"
+    icon="/content/dam/anthem/logos/akamai-logo.png"
+    id="anthem-akamai-admin"
+    target="_blank"/>

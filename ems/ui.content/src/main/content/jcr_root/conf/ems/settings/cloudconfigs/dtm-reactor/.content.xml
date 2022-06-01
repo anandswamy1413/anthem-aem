@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus,mix:versionable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Public Launch Property"
+        jcr:uuid="5f60802d-8d12-4900-8782-56709ac639ef"
+        sling:resourceType="cq/dtm-reactor/components/conf/page"
+        company="CO30c4ba4b5725425a9961af01d71a48d8"
+        imsConfigId="Adobe Launch"
+        includeProdOnAuthor="{Boolean}false"
+        property="PRb3a9c4618ab74119bcb2f5b946b32b58"
+        tagComponentFooter="cq/dtm-reactor/components/scripttag/footer"
+        tagComponentFooterRank="{Long}100"
+        tagComponentHeader="cq/dtm-reactor/components/scripttag/header"
+        tagComponentHeaderRank="{Long}100">
+        <development
+            jcr:primaryType="nt:unstructured"
+            archive="false"
+            archiveEncrypted="false"
+            async="{Boolean}false"
+            enablePollingImporter="false"
+            environment="EN1e4617588d8148dabcd463ed664b2e46"
+            libraryUri="//assets.adobedtm.com/77d981f695af/623f1918ec1a/launch-1ec4d635c362-development.min.js"
+            useMinified="false"
+            workflow="/var/workflow/models/cloudconfigs/dtm-reactor/library-download"/>
+        <staging
+            jcr:primaryType="nt:unstructured"
+            archive="false"
+            archiveEncrypted="false"
+            async="{Boolean}false"
+            enablePollingImporter="false"
+            environment="EN1e4617588d8148dabcd463ed664b2e46"
+            libraryUri="//assets.adobedtm.com/77d981f695af/623f1918ec1a/launch-1ec4d635c362-development.min.js"
+            useMinified="false"
+            workflow="/var/workflow/models/cloudconfigs/dtm-reactor/library-download"/>
+        <production
+            jcr:primaryType="nt:unstructured"
+            archive="false"
+            archiveEncrypted="false"
+            async="{Boolean}false"
+            enablePollingImporter="false"
+            environment="EN5160087acfee445d87a3a50cf45504b9"
+            libraryUri="//assets.adobedtm.com/77d981f695af/623f1918ec1a/launch-32c19e059a7c.min.js"
+            useMinified="false"
+            workflow="/var/workflow/models/cloudconfigs/dtm-reactor/library-download"/>
+    </jcr:content>
+</jcr:root>

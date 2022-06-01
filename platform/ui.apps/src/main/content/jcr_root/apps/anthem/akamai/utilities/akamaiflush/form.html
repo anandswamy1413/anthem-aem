@@ -1,0 +1,44 @@
+<sly data-sly-use.endpointsModel="${'com.anthem.platform.core.models.EndpointUrl'}" />
+
+<div id="akamai-clear-app" class="coral--light">
+    <form id="akamai-clear-form" class="coral-Form--vertical cq-dialog foundation-form foundation-layout-form" 
+    action="${endpointsModel.endpointMap.akamaipurge}" 
+    method="post" data-foundation-form-ajax="true"
+    data-foundation-form-response-ui-success='{"name": "anthem.flush-akamai"}'>
+        <coral-dialog-content>
+            <input type="hidden" name="_charset_" value="utf-8"/>
+            <div  class="cq-dialog-content">
+                <div>
+                    <div>
+                        <div  class="coral-Form-fieldwrapper">
+                            <label id="label_ae158647-c8af-4f61-8af5-5632d183f29c" class="coral-Form-fieldlabel">CP Codes</label>
+                            <coral-multifield id="objMulti" class="coral-Form-field" aria-labelledby="label_ae158647-c8af-4f61-8af5-5632d183f29c description_ae158647-c8af-4f61-8af5-5632d183f29c" data-foundation-validation="" data-validation="" data-granite-coral-multifield-name="obj">
+                                <button type="button" is="coral-button" class="js-coral-Multifield-add" coral-multifield-add>Add</button>
+                                <template coral-multifield-template>
+                                    <coral-select name="obj" placeholder="Choose an item">
+                                    <sly data-sly-list.key="${endpointsModel.cpCodesMap}" >
+                                      <coral-select-item value = "${endpointsModel.cpCodesMap[key]}">${key}</coral-select-item>   
+                                    </sly>  
+                                </template>
+                            </coral-multifield>
+                            <coral-icon class="coral-Form-fieldinfo" icon="infoCircle" tabindex="0" alt="description"></coral-icon>
+                            <coral-tooltip target="_prev" placement="left" id="description_ae158647-c8af-4f61-8af5-5632d183f29c">
+                                <coral-tooltip-content>Invalidate or Delete Cache but choose one object type per request.</coral-tooltip-content>
+                            </coral-tooltip>
+                        </div>
+                        <div  class="coral-Form-fieldwrapper">
+                            <label id="label_90aa26e1-2746-4c11-98a7-1dbd62d59a89" class="coral-Form-fieldlabel">Object Type</label>
+                            <coral-select id="typeSelect" class="coral-Form-field" name="objType" labelledby="label_90aa26e1-2746-4c11-98a7-1dbd62d59a89">
+                                <coral-select-item  value="invalidate">Invalidate Cache</coral-select-item>
+                                <coral-select-item  value="delete">Delete Cache</coral-select-item>
+                            </coral-select>
+                        </div>
+                    </div>
+                </div>
+                <button is="coral-button" variant="primary" icon="checkCircle" iconsize="S" size="L">
+                    Fast Flush
+                </button>
+            </div>
+        </coral-dialog-content>
+    </form>
+</div>

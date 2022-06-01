@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Anthem Config"
+    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+    <items jcr:primaryType="nt:unstructured">
+        <column
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <section
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Header &amp; Footer Fragments"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                    <items jcr:primaryType="nt:unstructured">
+                        <inheritedproperty
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="anthem/platform/components/structure/page/configurations/xfConfig"/>
+                        <headerfragmentpath
+                            granite:class="xf-header-footer-picker"
+                            granite:id="xfPicker"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/experience-fragments/editor/components/xffield"
+                            fieldDescription="Choose the variant to be displayed by this experience fragment"
+                            fieldLabel="Header Variation"
+                            filter="folderOrVariant"
+                            name="./headerFragmentPath"
+                            propertyFilter="cq:xfShowInEditor"
+                            variant="web">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="headerFragmentPath"/>
+                        </headerfragmentpath>
+                        <footerfragmentpath
+                            granite:class="xf-header-footer-picker"
+                            granite:id="xfPicker"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/experience-fragments/editor/components/xffield"
+                            fieldDescription="Choose the variant to be displayed by this experience fragment"
+                            fieldLabel="Footer Variation"
+                            filter="folderOrVariant"
+                            name="./footerFragmentPath"
+                            propertyFilter="cq:xfShowInEditor"
+                            variant="web">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="footerFragmentPath"/>
+                        </footerfragmentpath>
+                    </items>
+                </section>
+                <favIcon
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Fav Icon"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                    <items jcr:primaryType="nt:unstructured">
+                       <favIconLink
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            fieldLabel="Select Fav icon"
+                            emptyText="Select SVG image to be appeared as fav-icon"
+                            rootPath="/content/dam"
+                            name="./favIconLink">
+                           <granite:data
+                               jcr:primaryType="nt:unstructured"
+                               cq-msm-lockable="favIconLink"/>
+                       </favIconLink>
+                    </items>
+                </favIcon>
+                <errorPageConfig
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Error Page Configurations"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                    <items jcr:primaryType="nt:unstructured">
+                        <errorpagespath
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            fieldDescription="Error pages for this content tree"
+                            fieldLabel="Error Page Path"
+                            name="./errorPages"
+                            rootPath="/content">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="errorPages"/>
+                        </errorpagespath>
+                        <errorType
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            fieldDescription="Select error type for error pages"
+                            fieldLabel="Error Type value"
+                            name="./errorType">
+                            <items jcr:primaryType="nt:unstructured">
+                                <opt1
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Empty"
+                                    value=""/>
+                                <opt2
+                                    jcr:primaryType="nt:unstructured"
+                                    text="404"
+                                    value="404"/>
+                                <opt3
+                                    jcr:primaryType="nt:unstructured"
+                                    text="500"
+                                    value="500"/>
+                                <opt4
+                                    jcr:primaryType="nt:unstructured"
+                                    text="403"
+                                    value="403"/>
+                            </items>
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="errorType"/>
+                        </errorType>
+                    </items>
+                </errorPageConfig>
+                <analyticsConfig
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Analytics Configurations"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                    <items jcr:primaryType="nt:unstructured">
+                        <pageNameLevel
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                            fieldDescription="Page Depth to consider while constructing page name for analytics tracking. 0 is /content. Defaults to 2"
+                            fieldLabel="Page Name Depth"
+                            name="./pageNamelevel"
+                            value="{Long}2">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                cq-msm-lockable="pageNamelevel"/>
+                        </pageNameLevel>
+                    </items>
+                </analyticsConfig>
+            </items>
+        </column>
+    </items>
+</jcr:root>

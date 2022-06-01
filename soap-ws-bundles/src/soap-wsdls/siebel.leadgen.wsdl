@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:xsdLocal1="http://www.siebel.com/xml/WLP%20LM%20Lead%20Import%20IO"
+	targetNamespace="http://siebel.com/CustomUI"
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://siebel.com/CustomUI">
+	<types>
+		<xsd:schema elementFormDefault="qualified"
+			attributeFormDefault="unqualified"
+			xmlns:xsdLocal1="http://www.siebel.com/xml/WLP%20LM%20Lead%20Import%20IO"
+			targetNamespace="http://www.siebel.com/xml/WLP%20LM%20Lead%20Import%20IO"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:annotation>
+				<xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All
+					rights reserved. Siebel XSD Generation</xsd:documentation>
+			</xsd:annotation>
+			<xsd:element name="ListOfWlpLmLeadImportIo"
+				type="xsdLocal1:ListOfWlpLmLeadImportIo"></xsd:element>
+			<xsd:complexType
+				name="ListOfWlpLmLeadImportIoTopElmt">
+				<xsd:sequence>
+					<xsd:element name="ListOfWlpLmLeadImportIo"
+						maxOccurs="1" minOccurs="1"
+						type="xsdLocal1:ListOfWlpLmLeadImportIo"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ListOfWlpLmLeadImportIo">
+				<xsd:sequence>
+					<xsd:element name="LeadInfo" maxOccurs="unbounded"
+						minOccurs="1" type="xsdLocal1:LeadInfo"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="LeadInfo">
+				<xsd:sequence>
+					<xsd:element name="IndividualID" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="VendorLeadId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ResponseScore" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="LeadRank" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="RoutingCode" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Address1" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Address2" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="City" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="State" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="Zip" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="DayPhoneNumber" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="MobilePhone" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="NightPhoneNumber" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="FirstName" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="LastName" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="MiddleInitial" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Gender" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="EmailAddress" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ResponseCreateDate" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="DoNotMail" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="DoNotCall" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="VendorSource" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ReferenceNumber" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Disposition" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="DateOfBirth" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Comment" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="VendorInputFileName" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ProductInterest" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="DestinationCity" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="DestinationState" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="DestinationCounty" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="LanguagePreferenceCd" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ContactPreference" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="EmailOpt_In" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ResponseChannel" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="Deceased" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="FirstNameCustodian" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="LastNameCustodian" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="RelationshipToSubscriber"
+						maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ExtensionDate1" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ExtensionDate2" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ExtensionBool1" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ExtensionBool2" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ExtensionChar1" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ExtensionChar2" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ExtensionChar3" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="VendorLeadIdDuplicateStatus"
+						maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ContactDuplicateStatus"
+						maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="AgentId" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="ContactType" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="CtiAni" maxOccurs="1" minOccurs="0"
+						type="xsd:string"></xsd:element>
+					<xsd:element name="CurrentInsuranceCarrier"
+						maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="CurrentlyInsured" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="CustomerStages" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="DispositionDate" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="DispositionType" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ExhaustedReason" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="FederalPovertyLevel" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="FollowupDate" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="FollowupReason" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="FollowupType" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="FulfillmentMethod" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="LengthConv" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PreferedCallbackDay" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="PreferedCallbackTime" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="QualifyforMedicaid" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="QualifyforMedicare" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="QualifyingEvent" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="QuotedProduct1" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="QuotedProduct2" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="QuotedProduct3" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="QuotedProduct4" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="QuotedProduct5" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="AgentRanking" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="AccountId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="ResponseTypeIndicator" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="AssignmentChannel" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="SubsidyEligibility" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="CallDtTime" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="TobaccoStatus" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="WithPriorCarrierSince" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="WrongChannelReason" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+					<xsd:element name="FulfillmentkitId" maxOccurs="1"
+						minOccurs="0" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+		<xsd:schema elementFormDefault="qualified"
+			attributeFormDefault="unqualified"
+			targetNamespace="http://siebel.com/CustomUI"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:import
+				namespace="http://www.siebel.com/xml/WLP%20LM%20Lead%20Import%20IO"></xsd:import>
+			<xsd:element name="WLPMessageBasedLead_Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="xsdLocal1:ListOfWlpLmLeadImportIo"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="WLPMessageBasedLead_Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="StatusCode" type="xsd:string"></xsd:element>
+						<xsd:element name="StatusMessage" type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</types>
+	<message name="WLPMessageBasedLead_Input">
+		<part name="WLPMessageBasedLead_Input"
+			element="tns:WLPMessageBasedLead_Input"></part>
+	</message>
+	<message name="WLPMessageBasedLead_Output">
+		<part name="WLPMessageBasedLead_Output"
+			element="tns:WLPMessageBasedLead_Output"></part>
+	</message>
+	<portType name="WLP_spcLM_spcMessage_spcbased_spcLead_spcWF">
+		<operation name="WLPMessageBasedLead">
+			<input message="tns:WLPMessageBasedLead_Input"></input>
+			<output message="tns:WLPMessageBasedLead_Output"></output>
+		</operation>
+	</portType>
+	<binding name="WLP_spcLM_spcMessage_spcbased_spcLead_spcWF"
+		type="tns:WLP_spcLM_spcMessage_spcbased_spcLead_spcWF">
+		<soap:binding
+			transport="http://schemas.xmlsoap.org/soap/http" style="document"></soap:binding>
+		<operation name="WLPMessageBasedLead">
+			<soap:operation
+				soapAction="document/http://siebel.com/CustomUI:WLPMessageBasedLead"></soap:operation>
+			<input>
+				<soap:body use="literal"></soap:body>
+			</input>
+			<output>
+				<soap:body use="literal"></soap:body>
+			</output>
+		</operation>
+	</binding>
+	<service name="WLP_spcLM_spcMessage_spcbased_spcLead_spcWF">
+		<port binding="tns:WLP_spcLM_spcMessage_spcbased_spcLead_spcWF"
+			name="WLP_spcLM_spcMessage_spcbased_spcLead_spcWF">
+			<soap:address
+				location="https://siebel.prod.wellpoint.com/eaicons_ssl/start.swe?SWEExtSource=WebService&amp;SWEExtCmd=Execute&amp;WSSOAP=1"></soap:address>
+		</port>
+	</service>
+</definitions>

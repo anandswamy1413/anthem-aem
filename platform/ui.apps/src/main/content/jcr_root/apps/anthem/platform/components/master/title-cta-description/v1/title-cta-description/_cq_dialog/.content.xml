@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Title, Description And CTA"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[anthem-text-and-description.validation]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Title"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <id
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                emptyText="ID"
+                                                fieldDescription="HTML ID attribute to apply to the component."
+                                                fieldLabel="ID"
+                                                name="./id"/>
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Title"
+                                                name="./titleField"/>
+                                            <defaulttypes
+                                                granite:class="core-title-sizes-default"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Type / Size"
+                                                name="./type">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <h1
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="H1"
+                                                        value="h1"/>
+                                                    <h2
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="H2"
+                                                        value="h2"/>
+                                                    <h3
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="H3"
+                                                        value="h3"/>
+                                                    <h4
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="H4"
+                                                        value="h4"/>
+                                                    <h5
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="H5"
+                                                        value="h5"/>
+                                                    <h6
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="H6"
+                                                        value="h6"/>
+                                                </items>
+                                            </defaulttypes>
+                                            <titleWeight
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Title Font Weight"
+                                                name="./titleFontWeight">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <bold
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Bold"
+                                                        value="cmp-title-and-description__font-weight-bold"/>
+                                                    <semi-bold
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Semi Bold"
+                                                        value="cmp-title-and-description__font-weight-semi-bold"/>
+                                                    <light
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="light"
+                                                        value="cmp-title-and-description__font-weight-light"/>
+                                                    <normal
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Normal"
+                                                        value="cmp-title-and-description__font-weight-normal"/>
+                                                </items>
+                                            </titleWeight>
+                                            <titleLetterSpacing
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Title Letter Spacing"
+                                                name="./titleLetterSpacing">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <normal
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Normal Spacing"
+                                                        value="cmp-title-and-description__letter-spacing-normal"/>
+                                                    <stretched
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="High Spacing"
+                                                        value="cmp-title-and-description__letter-spacing-stretched"/>
+                                                </items>
+                                            </titleLetterSpacing>
+                                            <titleTextColor
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Title Text Color"
+                                                name="./titleTextColor">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <dark_gray
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Dark Gray"
+                                                        value="cmp-title-and-description__grey-text"/>
+                                                    <white
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="White"
+                                                        value="cmp-title-and-description__white-text"/>
+                                                </items>
+                                            </titleTextColor>
+                                            <linkURL
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                                                fieldDescription="Links the title. Path to a content page, external URL or page anchor."
+                                                fieldLabel="Title Link"
+                                                name="./linkURL"
+                                                rootPath="/content"/>
+                                            <ctaAnalytics
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                emptyText="Enter Analytics Tag"
+                                                fieldLabel="Title Link Analytics"
+                                                name="./titleAnalytics"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </title>
+                    <subHeaderText
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Sub-Header Text"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <configCheck
+                                                granite:class="showhide-subheader"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                name="./subheaderRequired"
+                                                text="Enable SubHeader?"
+                                                uncheckedValue="false"
+                                                value="{Boolean}true"/>
+                                            <subheader
+                                                granite:class="showhide-subheader-target hide"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <subheaderField
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Subheader"
+                                                        name="./subheaderField"/>
+                                                    <defaulttypes
+                                                        granite:class="core-title-sizes-default"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                        fieldLabel="Type / Size"
+                                                        name="./subheaderType">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <h1
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="H1"
+                                                                value="h1"/>
+                                                            <h2
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="H2"
+                                                                value="h2"/>
+                                                            <h3
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="H3"
+                                                                value="h3"/>
+                                                            <h4
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="H4"
+                                                                value="h4"/>
+                                                            <h5
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="H5"
+                                                                value="h5"/>
+                                                            <h6
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="H6"
+                                                                value="h6"/>
+                                                        </items>
+                                                    </defaulttypes>
+                                                    <subheaderFontWeight
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                        fieldLabel="Subheader Font Weight"
+                                                        name="./subheaderFontWeight">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <bold
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Bold"
+                                                                value="cmp-title-and-description__font-weight-bold"/>
+                                                            <semi-bold
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Semi Bold"
+                                                                value="cmp-title-and-description__font-weight-semi-bold"/>
+                                                            <light
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="light"
+                                                                value="cmp-title-and-description__font-weight-light"/>
+                                                            <normal
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Normal"
+                                                                value="cmp-title-and-description__font-weight-normal"/>
+                                                        </items>
+                                                    </subheaderFontWeight>
+                                                    <subheaderLetterSpacing
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                        fieldLabel="Subheader Letter Spacing"
+                                                        name="./subheaderLetterSpacing">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <normal
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Normal Spacing"
+                                                                value="cmp-title-and-description__letter-spacing-normal"/>
+                                                            <stretched
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="High Spacing"
+                                                                value="cmp-title-and-description__letter-spacing-stretched"/>
+                                                        </items>
+                                                    </subheaderLetterSpacing>
+                                                    <subheaderTextColor
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                        fieldLabel="Subheader Text Color"
+                                                        name="./subheaderTextColor">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <dark_gray
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Dark Gray"
+                                                                value="cmp-title-and-description__grey-text"/>
+                                                            <white
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="White"
+                                                                value="cmp-title-and-description__white-text"/>
+                                                        </items>
+                                                    </subheaderTextColor>
+                                                    <subheaderLinkURL
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                                                        fieldDescription="Links the subheader. Path to a content page, external URL or page anchor."
+                                                        fieldLabel="Link"
+                                                        name="./subheaderLinkURL"
+                                                        rootPath="/content">
+                                                        <granite:rendercondition
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/renderconditions/simple"
+                                                            expression="${cqDesign.subheaderLinkDisabled}"/>
+                                                    </subheaderLinkURL>
+                                                    <ctaAnalytics
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        emptyText="Enter Analytics Tag"
+                                                        fieldLabel="Subheader Link Analytics"
+                                                        name="./subTitleAnalytics"/>
+                                                </items>
+                                            </subheader>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </subHeaderText>
+                    <description
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Description"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <configCheck
+                                                granite:class="showhide-desc"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                name="./descRequired"
+                                                text="Enable Description?"
+                                                uncheckedValue="false"
+                                                value="{Boolean}true"/>
+                                            <desc
+                                                granite:class="showhide-desc-target hide"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <enableBluebar
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                        fieldDescription="Check This To Enable Bluebar On Left Side Of Description Text "
+                                                        name="./enableBluebar"
+                                                        text="Enable Bluebar On Description Text?"
+                                                        uncheckedValue="false"
+                                                        value="{Boolean}true"/>
+                                                    <summaryText
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                        fieldLabel="Description"
+                                                        name="./description"
+                                                        useFixedInlineToolbar="{Boolean}true">
+                                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                                            <format
+                                                                jcr:primaryType="nt:unstructured"
+                                                                features="*"/>
+                                                            <justify
+                                                                jcr:primaryType="nt:unstructured"
+                                                                features="-"/>
+                                                            <links
+                                                                jcr:primaryType="nt:unstructured"
+                                                                features="modifylink,unlink"/>
+                                                            <lists
+                                                                jcr:primaryType="nt:unstructured"
+                                                                features="*"/>
+                                                            <misctools jcr:primaryType="nt:unstructured">
+                                                                <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                                                    <chars jcr:primaryType="nt:unstructured">
+                                                                        <default_copyright
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            entity="&amp;copy;"
+                                                                            name="copyright"/>
+                                                                        <default_euro
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            entity="&amp;euro;"
+                                                                            name="euro"/>
+                                                                        <default_registered
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            entity="&amp;reg;"
+                                                                            name="registered"/>
+                                                                        <default_trademark
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            entity="&amp;trade;"
+                                                                            name="trademark"/>
+                                                                    </chars>
+                                                                </specialCharsConfig>
+                                                            </misctools>
+                                                            <paraformat
+                                                                jcr:primaryType="nt:unstructured"
+                                                                features="*">
+                                                                <formats jcr:primaryType="nt:unstructured">
+                                                                    <default_p
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        description="Paragraph"
+                                                                        tag="p"/>
+                                                                    <default_h1
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        description="Heading 1"
+                                                                        tag="h1"/>
+                                                                    <default_h2
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        description="Heading 2"
+                                                                        tag="h2"/>
+                                                                    <default_h3
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        description="Heading 3"
+                                                                        tag="h3"/>
+                                                                    <default_h4
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        description="Heading 4"
+                                                                        tag="h4"/>
+                                                                    <default_h5
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        description="Heading 5"
+                                                                        tag="h5"/>
+                                                                    <default_h6
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        description="Heading 6"
+                                                                        tag="h6"/>
+                                                                    <default_blockquote
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        description="Quote"
+                                                                        tag="blockquote"/>
+                                                                    <default_pre
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        description="Preformatted"
+                                                                        tag="pre"/>
+                                                                </formats>
+                                                            </paraformat>
+                                                            <table
+                                                                jcr:primaryType="nt:unstructured"
+                                                                features="-">
+                                                                <hiddenHeaderConfig
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden"
+                                                                    hiddenHeaderEditingCSS="cq-RichText-hiddenHeader--editing"/>
+                                                            </table>
+                                                            <tracklinks
+                                                                jcr:primaryType="nt:unstructured"
+                                                                features="*"/>
+                                                        </rtePlugins>
+                                                        <uiSettings jcr:primaryType="nt:unstructured">
+                                                            <cui jcr:primaryType="nt:unstructured">
+                                                                <inline
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    toolbar="[format#bold,format#italic,format#underline,#justify,#lists,links#modifylink,links#unlink,#paraformat]">
+                                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                                        <justify
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            items="[justify#justifyleft,justify#justifycenter,justify#justifyright]"
+                                                                            ref="justify"/>
+                                                                        <lists
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                                                            ref="lists"/>
+                                                                        <paraformat
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            items="paraformat:getFormats:paraformat-pulldown"
+                                                                            ref="paraformat"/>
+                                                                    </popovers>
+                                                                </inline>
+                                                                <dialogFullScreen
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    toolbar="[format#bold,format#italic,format#underline,justify#justifyleft,justify#justifycenter,justify#justifyright,lists#unordered,lists#ordered,lists#outdent,lists#indent,links#modifylink,links#unlink,table#createoredit,#paraformat,image#imageProps]">
+                                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                                        <paraformat
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            items="paraformat:getFormats:paraformat-pulldown"
+                                                                            ref="paraformat"/>
+                                                                    </popovers>
+                                                                </dialogFullScreen>
+                                                                <tableEditOptions
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    toolbar="[table#insertcolumn-before,table#insertcolumn-after,table#removecolumn,-,table#insertrow-before,table#insertrow-after,table#removerow,-,table#mergecells-right,table#mergecells-down,table#mergecells,table#splitcell-horizontal,table#splitcell-vertical,-,table#selectrow,table#selectcolumn,-,table#ensureparagraph,-,table#modifytableandcell,table#removetable,-,undo#undo,undo#redo,-,table#exitTableEditing,-]"/>
+                                                            </cui>
+                                                        </uiSettings>
+                                                    </summaryText>
+                                                    <descriptionWeight
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                        fieldLabel="Description Text Weight"
+                                                        name="./descriptionWeight">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <normal
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Normal"
+                                                                value="cmp-title-and-description__font-weight-normal"/>
+                                                            <light
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="light"
+                                                                value="cmp-title-and-description__font-weight-light"/>
+                                                            <semi-bold
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Semi Bold"
+                                                                value="cmp-title-and-description__font-weight-semi-bold"/>
+                                                            <bold
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Bold"
+                                                                value="cmp-title-and-description__font-weight-bold"/>
+                                                        </items>
+                                                    </descriptionWeight>
+                                                    <descTextColor
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                        fieldLabel="Description Text Color"
+                                                        name="./descTextColor">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <dark_gray
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Dark Gray"
+                                                                value="cmp-title-and-description__grey-text"/>
+                                                            <white
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="White"
+                                                                value="cmp-title-and-description__white-text"/>
+                                                        </items>
+                                                    </descTextColor>
+                                                </items>
+                                            </desc>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </description>
+                    <cta
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="CTA"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <configCheck
+                                                granite:class="showhide-cta"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                name="./ctaRequired"
+                                                text="Enable CTA?"
+                                                uncheckedValue="false"
+                                                value="{Boolean}true"/>
+                                            <ConfigurationList
+                                                granite:class="showhide-cta-target hide"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <well
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <ctaList
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                composite="{Boolean}true"
+                                                                fieldLabel="Add CTA">
+                                                                <field
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                    name="./ctaList">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <ctaIcon
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                            emptyText="Enter CTA icon"
+                                                                            fieldLabel="CTA Icon"
+                                                                            name="./ctaIcon"
+                                                                            rootPath="/content/dam"/>
+                                                                        <alttext
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Icon Alt Text"
+                                                                            name="./iconAltText"/>
+                                                                        <ctaLabel
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            emptyText="Enter CTA label text"
+                                                                            fieldLabel="CTA Label"
+                                                                            name="./ctaLabel"/>
+                                                                        <ctaLink
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                            emptyText="Enter CTA link"
+                                                                            fieldLabel="CTA Link"
+                                                                            name="./ctaLink"
+                                                                            rootPath="/content"/>
+                                                                        <openInNewTab
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                                            name="./openCtaInNewTab"
+                                                                            text="Open Link in new tab?"
+                                                                            uncheckedValue="_self"
+                                                                            value="_blank"/>
+                                                                        <ctaAnalytics
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            emptyText="Enter Analytics Tag"
+                                                                            fieldLabel="CTA Analytics"
+                                                                            name="./ctaAnalytics"/>
+                                                                    </items>
+                                                                </field>
+                                                            </ctaList>
+                                                            <linkAlignment
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                fieldLabel="CTA Alignment"
+                                                                name="./linkAlignment">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <horizontal
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Horizontal"
+                                                                        value="cmp-title-and-description__align-horizontal"/>
+                                                                    <vertical
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Vertical"
+                                                                        value="cmp-title-and-description__align-vertical"/>
+                                                                </items>
+                                                            </linkAlignment>
+                                                            <linkTextColor
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                fieldLabel="Link Text Color"
+                                                                name="./linkTextColor">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <dark_grey
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Dark Gray"
+                                                                        value="cmp-title-and-description__grey-text"/>
+                                                                    <white
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="White"
+                                                                        value="cmp-title-and-description__white-text"/>
+                                                                </items>
+                                                            </linkTextColor>
+                                                        </items>
+                                                    </well>
+                                                </items>
+                                            </ConfigurationList>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </cta>
+                    <analytics
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Analytics"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <disableLinkTracking
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                checked="{Boolean}true"
+                                                fieldDescription="If checked, the data attributes will not be tracked"
+                                                name="./disableLinkTracking"
+                                                required="{Boolean}false"
+                                                text="disable link tracking"
+                                                uncheckedValue="false"
+                                                value="true"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </analytics>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

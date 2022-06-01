@@ -1,0 +1,18 @@
+<sly class="cmp-hero-fact" data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+    data-cmp-is="hero-fact" data-sly-use.heroFactModel="${'com.anthem.platform.core.models.HeroFactModel'}">
+</sly>
+<sly data-sly-call="${template.placeholder @ isEmpty=!heroFactModel.heading}"></sly>
+
+<div class="campaign-fullwidth-colorband bordered-colorband ${properties.pageType == 'error-page' ? 'error-page-hero-fact' : ''}">
+    <div class="container">
+        <div class="band-textcontainer textcontainer-${heroFactModel.textAlign}">
+            <div class="band-heading-text bandtext-${heroFactModel.textAlign}">
+               ${heroFactModel.heading @context='html'}
+            </div>
+            <div class="separator" data-sly-test="${properties.separatorLine}"></div>
+            <div class="band-sub-text subtext-${heroFactModel.textAlign}" data-sly-test="${heroFactModel.subHeading}">
+                ${heroFactModel.subHeading @context='html'}
+            </div>
+        </div>
+    </div>
+</div>

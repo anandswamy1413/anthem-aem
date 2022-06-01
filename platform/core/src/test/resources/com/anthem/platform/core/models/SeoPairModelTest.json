@@ -1,0 +1,10 @@
+{
+	"seo-pair": {
+		"jcr:primaryType": "nt:unstructured",
+		"jcr:createdBy": "admin",
+		"tagType": "Key",
+		"tagName":"Value",
+		"tagValue":"Tag Value",
+		"disableFontPreload": "Header Text"
+	}
+}

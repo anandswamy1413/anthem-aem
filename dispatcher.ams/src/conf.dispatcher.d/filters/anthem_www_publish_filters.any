@@ -1,0 +1,33 @@
+# Anthem com Custom rules
+
+# Content Rules [Added by HM]
+/0201 { /type "allow" /extension '(css|eot|gif|ico|jpeg|jpg|js|gif|pdf|png|svg|swf|ttf|woff|woff2|html)' /path "/content/anthem/*" } 
+/0202 { /type "allow" /extension '(css|eot|gif|ico|jpeg|jpg|js|gif|pdf|png|svg|swf|ttf|woff|woff2|html)' /path "/content/www/*" } 
+/0203 { /type "allow" /extension "json" /selectors "(model)" /path "/content/anthem/*" }
+/0204 { /type "allow" /extension "json" /selectors "(model)" /path "/content/www/*" }
+/0205 {/type "allow" /method '(HEAD)' /url "/content/*"}
+
+# Dam Rules [Added by HM]
+/0221 {/type "allow" /method '(GET)' /url "/content/dam/anthem/*"}
+/0222 {/type "allow" /method '(GET)' /url "/content/dam/anthem/*.transform/*"} # Rule for Named transform servlet
+/0223 { /type "allow" /extension '(json|jfif|docx|doc|pdf|xls|xlsx|ppt|pptx)' /path "/content/dam/anthem/*" }  #Additional extensions
+
+# Servlet Rules [Added by HM]
+/0231 {/type "allow" /method '(GET|POST)' /url "/content/anthem/*/servlets/*" }
+
+# Miscellaneous Rules [Added by HM]
+/0251 { /type "allow" /url "/content/dam/anthem/*/robots.txt" } # SE Crawling
+/0252 { /type "allow" /url "/etc/designs/*" } # Allow brightcove player JS 
+/0253 { /type "allow" /url "/content/*/*.sitemap.xml" }
+/0254 { /type "allow" /url "/content/*/*.sitemapfeed.xml" }
+
+/0105 {/type "allow" /method '(GET|POST)' /url "*/j_security_check/*" }
+/0106 {/type "allow" /method '(GET|POST)' /url "*/j_security_check" }
+/0107 { /type "allow" /method "GET" /extension "html" /url "/system/sling/logout.html*" }
+/0108 {/type "allow" /method '(GET|POST)' /url "/bin/*" }
+
+#Allow DAM Paths for covid19 Microsite and Gatewaytoanthem
+/0109 {/type "allow" /method '(GET)' /url "/content/dam/covid19/*"}
+/0110 {/type "allow" /method '(GET)' /url "/content/dam/covid19/*.transform/*"}
+
+

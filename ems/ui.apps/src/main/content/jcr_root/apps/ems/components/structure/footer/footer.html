@@ -1,0 +1,26 @@
+<sly
+  data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+  data-sly-call="${clientlib.css @ categories='anthem.ems.footer'}"
+/>
+<div
+  data-sly-test="${wcmmode.edit}"
+  class="cq-droptarget cq-placeholder"
+  data-emptytext="Footer"/>
+<footer style="background:${properties.footerBackgroundColor @context='styleString'};" class="footerWrap link-fw-container">
+    <div class="footerWrap__cont link-fwc-container">
+       <div class = "footerWrap__cont__desc">${properties.disclaimer @ context='html'}</div>
+        <a
+		  style="background:${properties.wcagButtonColor @context='styleString'};" 
+          href="${properties.wcagUrl}"
+          target="${properties.linkTarget}"
+          rel="noopener noreferrer"
+          class="footerWrap__cont__nav"
+          aria-label="${properties.wcagMarkup}">
+          <img
+            src="${properties.wcagLogo}"
+            alt="${properties.wcagAlt}"
+          />
+          <span class="footerWrap__cont__nav__text">${properties.wcagMarkup}</span>
+        </a>
+    </div>
+</footer>

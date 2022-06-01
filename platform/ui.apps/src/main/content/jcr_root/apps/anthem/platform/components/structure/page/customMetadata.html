@@ -1,0 +1,36 @@
+<template data-sly-template.custom_metadata="${ @ model, pageInfoModel, pageProperties}">
+    <sly data-sly-unwrap>
+        <sly data-sly-list.child="${model.seoPairList}">
+            <sly data-sly-test="${child.tagType=='name'}">
+            <meta data-sly-use.linkChecker="${'com.anthem.platform.core.utils.LinkChecker' @ link=child.tagValue}"
+                    name="${child.tagName}" content="${linkChecker.externalUrl}">
+            </sly>
+            <sly data-sly-test="${child.tagType=='property'}">
+                <meta data-sly-use.linkChecker="${'com.anthem.platform.core.utils.LinkChecker' @ link=child.tagValue}"
+                    property="${child.tagName}" content="${linkChecker.externalUrl}" />
+            </sly>
+            <sly data-sly-test="${child.tagType=='canonical'}">
+                <link data-sly-use.linkChecker="${'com.anthem.platform.core.utils.LinkChecker' @ link=child.tagValue}"
+                    rel="${child.tagName}" href="${linkChecker.externalUrl}">
+            </sly>
+            <sly data-sly-set.ogTitleSet="${!ogTitleSet && child.tagName == 'og:title' ? 'true' : ogTitleSet}"
+                data-sly-set.twitterTitleSet="${!twitterTitleSet && child.tagName == 'twitter:title' ? 'true' : twitterTitleSet}"
+                data-sly-set.ogDescSet="${!ogDescSet && child.tagName == 'og:description' ? 'true' : ogDescSet}"
+                data-sly-set.twitterDescSet="${!twitterDescSet && child.tagName == 'twitter:description' ? 'true' : twitterDescSet}"
+                data-sly-set.ogUrlset="${!ogUrlset && child.tagName == 'og:url' ? 'true' : ogUrlset}" 
+                data-sly-set.ogSiteNameSet="${!ogSiteNameSet && child.tagName == 'og:site_name' ? 'true' : ogSiteNameSet}"  />
+        </sly>
+
+        <meta data-sly-test="${!ogTitleSet && pageInfoModel.seoTitle}" property="og:title"
+            content="${pageInfoModel.seoTitle}" />
+        <meta data-sly-test="${!twitterTitleSet && pageInfoModel.seoTitle}" property="twitter:title"
+            content="${pageInfoModel.seoTitle}" />
+        <meta data-sly-test="${!ogDescSet && pageProperties.jcr:description}" property="og:description"
+            content="${pageProperties.jcr:description}" />
+        <meta data-sly-test="${!twitterDescSet && pageProperties.jcr:description}" property="twitter:description"
+            content="${pageProperties.jcr:description}" />
+        <meta data-sly-test="${!ogUrlset && pageInfoModel.absolutePageUrl}" property="og:url"
+            content="${pageInfoModel.absolutePageUrl}" />
+        <meta data-sly-test="${!ogSiteNameSet}" property="og:site_name" content="${inheritedPageProperties.ogSiteName || pageInfoModel.hostName}" />
+    </sly>
+</template>

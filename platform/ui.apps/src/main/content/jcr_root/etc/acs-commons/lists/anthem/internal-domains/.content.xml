@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Internal Load Balancer Domains"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="https://anthem-dev3.adobecqms.net"
+                value="https://anthem-dev3.adobecqms.net"/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="https://anthem-qa1.adobecqms.net"
+                value="https://anthem-qa1.adobecqms.net"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="https://anthem-uat2.adobecqms.net"
+                value="https://anthem-uat2.adobecqms.net"/>
+            <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="https://anthem-stage.adobecqms.net"
+                value="https://anthem-stage.adobecqms.net"/>
+            <item4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="https://anthem-prod1.adobecqms.net"
+                value="https://anthem-prod1.adobecqms.net"/>
+        </list>
+    </jcr:content>
+</jcr:root>

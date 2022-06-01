@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="RefID Metadata"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="LP1-Control:LP1-I1_C:LP1-I1_M:LP1-I2_C:LP1-I2_M|LP2-Control:LP2-AEM"
+                value="variation_mapping"/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="State|Ref ID|TFN"
+                value="columns_to_read"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Ref ID"
+                value="mapping_key"/>
+            <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="/var/anthem_data/"
+                value="root_path"/>
+            <item4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="ref_ids"
+                value="root_node_name"/>
+            <item5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="State"
+                value="state_key"/>
+        </list>
+    </jcr:content>
+</jcr:root>

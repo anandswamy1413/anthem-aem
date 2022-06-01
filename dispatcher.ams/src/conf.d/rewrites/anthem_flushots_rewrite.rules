@@ -1,0 +1,52 @@
+# rewrite for root redirect
+RewriteRule ^/?$ /content/anthem-campaigns/flu-vaccine/us/en/home.html [PT,L]
+RewriteRule ^/es?$ /content/anthem-campaigns/flu-vaccine/us/es/home.html [PT,L]
+
+# Rewrite rules added for release 2 URLs
+RewriteRule ^/es/anthem?$ /content/anthem-campaigns/flu-vaccine/us/es/in/home.html [PT,L]
+RewriteRule ^/anthem?$ /content/anthem-campaigns/flu-vaccine/us/en/in/home.html [PT,L]
+RewriteRule ^/es/agp?$ /content/anthem-campaigns/flu-vaccine/us/es/tx/home.html [PT,L]
+RewriteRule ^/agp?$ /content/anthem-campaigns/flu-vaccine/us/en/tx/home.html [PT,L]
+RewriteRule ^/ca?$ /content/anthem-campaigns/flu-vaccine/us/en/ca/home.html [PT,L]
+RewriteRule ^/ny?$ /content/anthem-campaigns/flu-vaccine/us/en/ny/home.html [PT,L]
+RewriteRule ^/fl?$ /content/anthem-campaigns/flu-vaccine/us/en/fl/home.html [PT,L]
+RewriteRule ^/va?$ /content/anthem-campaigns/flu-vaccine/us/en/va/home.html [PT,L]
+RewriteRule ^/es/ca?$ /content/anthem-campaigns/flu-vaccine/us/es/ca/home.html [PT,L]
+RewriteRule ^/es/ny?$ /content/anthem-campaigns/flu-vaccine/us/es/ny/home.html [PT,L]
+RewriteRule ^/es/fl?$ /content/anthem-campaigns/flu-vaccine/us/es/fl/home.html [PT,L]
+RewriteRule ^/es/va?$ /content/anthem-campaigns/flu-vaccine/us/es/va/home.html [PT,L]
+RewriteRule ^/es/healthyblue?$ /content/anthem-campaigns/flu-vaccine/us/es/la/home.html [PT,L]
+RewriteRule ^/healthyblue?$ /content/anthem-campaigns/flu-vaccine/us/en/la/home.html [PT,L]
+
+RewriteCond %{REQUEST_URI} !^/apps
+RewriteCond %{REQUEST_URI} !^/bin
+RewriteCond %{REQUEST_URI} !^/content
+RewriteCond %{REQUEST_URI} !^/etc
+RewriteCond %{REQUEST_URI} !^/home
+RewriteCond %{REQUEST_URI} !^/libs
+RewriteCond %{REQUEST_URI} !^/saml_login
+RewriteCond %{REQUEST_URI} !^/system
+RewriteCond %{REQUEST_URI} !^/tmp
+RewriteCond %{REQUEST_URI} !^/var
+RewriteCond %{REQUEST_URI} (.html)$
+RewriteRule ^/es/(.*)$ /content/anthem-campaigns/flu-vaccine/us/es/$1 [PT,L]
+
+RewriteCond %{REQUEST_URI} !^/apps
+RewriteCond %{REQUEST_URI} !^/bin
+RewriteCond %{REQUEST_URI} !^/content
+RewriteCond %{REQUEST_URI} !^/etc
+RewriteCond %{REQUEST_URI} !^/home
+RewriteCond %{REQUEST_URI} !^/libs
+RewriteCond %{REQUEST_URI} !^/saml_login
+RewriteCond %{REQUEST_URI} !^/system
+RewriteCond %{REQUEST_URI} !^/tmp
+RewriteCond %{REQUEST_URI} !^/var
+RewriteCond %{REQUEST_URI} (.html)$
+RewriteRule ^/(.*)$ /content/anthem-campaigns/flu-vaccine/us/en/$1 [PT,L]
+
+#Site map configuration
+RewriteRule ^/sitemap.xml /content/anthem-campaigns.sitemap.xml [PT,L]
+
+#Robots configuration
+RewriteRule ^/robots.txt /content/dam/anthem-campaigns/flu-vaccine/2020/robots.txt [PT,L]
+

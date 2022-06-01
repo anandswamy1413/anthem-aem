@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="ESearch Tenants"
+        jcr:uuid="cb5d46a1-aca6-49fa-a6bd-18c4621fbe41"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="anthem_abcbs_dev"
+                value="ABCBS"/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="anthem_abc_dev"
+                value="ABC"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="anthem_ebcbs_dev"
+                value="EBCBS"/>
+        </list>
+    </jcr:content>
+</jcr:root>

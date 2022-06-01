@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:crx="http://www.day.com/crx/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:ACL">
+    <allow
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="mac-default-anthememscontentfragments-owner"
+        rep:privileges="{Name}[jcr:versionManagement,jcr:read,jcr:modifyAccessControl,jcr:readAccessControl,rep:write,crx:replicate,jcr:lockManagement]"/>
+    <allow1
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="mac-default-anthememscontentfragments-editor"
+        rep:privileges="{Name}[jcr:nodeTypeManagement,jcr:versionManagement,jcr:read,jcr:readAccessControl,jcr:addChildNodes,crx:replicate,jcr:modifyProperties,jcr:lockManagement,jcr:removeChildNodes]"/>
+    <allow2
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="mac-default-anthememscontentfragments-editor"
+        rep:privileges="{Name}[jcr:removeNode]">
+        <rep:restrictions
+            jcr:primaryType="rep:Restrictions"
+            rep:glob="/*"/>
+    </allow2>
+    <allow3
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="mac-default-anthememscontentfragments"
+        rep:privileges="{Name}[jcr:read]"/>
+</jcr:root>

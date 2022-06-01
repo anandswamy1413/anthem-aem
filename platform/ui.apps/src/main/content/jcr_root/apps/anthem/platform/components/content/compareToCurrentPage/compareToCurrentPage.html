@@ -1,0 +1,38 @@
+<sly class="cmp-compareToCurrent" data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+	data-sly-call="${template.placeholder @ isEmpty='true'}">
+</sly>
+
+<div id="params" data-q-path="" data-q-vid=""></div>
+<script>
+	var domainName = document.location.origin;
+	var urlParams = new URLSearchParams(window.location.search);
+	var diffResUrl = '/mnt/overlay/wcm/core/content/sites/diffresources.html';
+	var item = '?item=';
+	var sideBySide = '&sideBySide&versionId=';
+	var payloadPath = decodeURIComponent(encodeURIComponent(urlParams.get('path')));
+    var versionId = decodeURIComponent(encodeURIComponent(urlParams.get('vid')));
+	if(payloadPath.indexOf("/content") !== -1){
+		$('#params').attr("data-q-path",payloadPath);
+		$('#params').attr("data-q-vid",versionId);
+    }
+
+	var payloadDataAttr = encodeURIComponent($('#params').attr("data-q-path"));
+    var versionIdAttr = encodeURIComponent($('#params').attr("data-q-vid"));;
+
+	$.ajax({
+    	type: 'POST',
+    	url: '/mnt/overlay/wcm/core/content/sites/versionhistory/_jcr_content.txt',
+    	data: { 
+        	'versionId': versionIdAttr, 
+        	'wcmmode': 'disabled'
+    	},
+    success: function(response, textStatus, jqXHR){
+    	if (jqXHR.status === 200) {
+	   		var tempNodePath = response;
+	    	var compareToCurrentUrl = domainName + diffResUrl + payloadDataAttr + item + tempNodePath + sideBySide + versionId;
+	        window.location.replace(compareToCurrentUrl);
+        }
+    }
+});
+</script>
+
