@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Brightcove Video Player"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[anthem.authoring.brightcove.video-player]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/tabs">
+        <items jcr:primaryType="nt:unstructured">
+            <tab-video
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Media"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <account
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldDescription=""
+                                fieldLabel="Account:"
+                                name="./account"/>
+                            <playlistList
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                emptyText="Select"
+                                fieldLabel="Video:"
+                                name="./videoPlayer"/>
+                            <videoList
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                emptyText="Select"
+                                fieldLabel="Player:"
+                                name="./playerPath"/>
+                        </items>
+                    </column>
+                </items>
+            </tab-video>
+            <tab-styles
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Advanced"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <fieldset-container-embed-type
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Embed Type"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <embedType
+                                        granite:class="cq-dialog-dropdown-showhide"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        emptyOption="false"
+                                        fieldDescription="Type of Embed Mode"
+                                        fieldLabel="Embed Type:"
+                                        name="./embedType">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <advanced
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Advanced (Javascript)"
+                                                value="advanced"/>
+                                            <iframe
+                                                jcr:primaryType="nt:unstructured"
+                                                text="IFRAME"
+                                                value="iframe"/>
+                                        </items>
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-dialog-dropdown-showhide-target=".iframeOptions-showhide-target"/>
+                                    </embedType>
+                                </items>
+                            </fieldset-container-embed-type>
+                            <fieldset-container-attributes
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Component Container Attributes"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <containerID
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="This does &lt;strong>not&lt;/strong> replace the randomly generated ID, but will added to the Component's Container instead."
+                                        fieldLabel="Container ID"
+                                        name="./containerID"/>
+                                    <containerClass
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Container Class"
+                                        name="./containerClass"/>
+                                </items>
+                            </fieldset-container-attributes>
+                            <fieldset-player-styles
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Player Styles"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <align
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="When configuring an &lt;b>HTML5 Playlist&lt;/b> the following rules apply: &lt;br/>&lt;br/>&lt;b>Left: &lt;/b> Playlist appears &lt;em>after&lt;/em> the Video element. &lt;br/>&lt;b>Center: &lt;/b> Playlist appears &lt;em>after&lt;/em> the Video element. &lt;br/>&lt;b>Right: &lt;/b> Playlist appears &lt;em>before&lt;/em> the Video element. &lt;br/>&lt;br/>&lt;i>Update your CSS accordingly.&lt;/i>&lt;br/>"
+                                        fieldLabel="Player Alignment:"
+                                        name="./align">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <left
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Left"
+                                                value="left"/>
+                                            <center
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Center"
+                                                value="center"/>
+                                            <right
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Right"
+                                                value="right"/>
+                                        </items>
+                                    </align>
+                                    <size
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/sizefield"
+                                        fieldLabel="Size">
+                                        <width
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                            name="./width"/>
+                                        <height
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                            name="./height"/>
+                                    </size>
+                                </items>
+                            </fieldset-player-styles>
+                            <fieldset-advanced-css
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Advanced CSS"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <inlineCSS
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                        fieldDescription="&lt;strong>Warning: &lt;/strong> Limit the scope of these style rules by using the &lt;strong>Container ID&lt;/strong> or &lt;strong>Container Class&lt;/strong> defined above as Selectors in your CSS."
+                                        fieldLabel="Inline CSS"
+                                        name="./inlineCSS"/>
+                                </items>
+                            </fieldset-advanced-css>
+                        </items>
+                    </column>
+                </items>
+            </tab-styles>
+        </items>
+    </content>
+</jcr:root>

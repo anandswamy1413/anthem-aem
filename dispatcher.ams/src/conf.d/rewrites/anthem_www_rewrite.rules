@@ -1,0 +1,76 @@
+# rewrite for root redirect
+RewriteRule ^/?$ /content/www/us/en/home.html [PT,L]
+RewriteRule ^/ca$ /content/www/us/en/ca.html [PT,L]
+
+## Allow Fwc Mottif assets url [Added by HM]
+RewriteCond %{REQUEST_URI} ^/fwc-assets
+RewriteRule ^/fwc-assets/(.*)$ /etc.clientlibs/anthem/fe-clientlibs/anthem.com/resources/fwc-assets/$1 [PT,L]
+
+#Site map configuration
+RewriteRule ^/aemsitemap.xml  /content/www/us/en.sitemapfeed.xml [PT,L]
+RewriteRule ^/sitemap.xml  /content/www/us/en.sitemapfeed.xml [PT,L]
+
+## Rule to restrict content path on live site [Added by HM]
+RewriteCond %{REQUEST_URI} ^/content
+RewriteCond %{REQUEST_METHOD} !^HEAD
+RewriteCond %{REQUEST_URI} !^/content/dam
+RewriteCond %{REQUEST_URI} !^/content/(.*)/servlets
+RewriteCond %{REQUEST_URI} !^/content/(.*)/api
+RewriteCond %{REQUEST_URI} !^/content/experience-fragments
+RewriteRule ^/content/(www|anthem|anthem-inc|anthem-campaigns|empireblue|empire-blue|hbla|agp)/(.*)$ - [R=404,L,NC]
+
+
+RewriteRule ^/tng/(.*)$ /content/covid-sites/anthem/tng/$1 [PT,L]
+RewriteRule ^/ca/tng/(.*)$ /content/covid-sites/anthem/tng/$1 [PT,L]
+
+RewriteRule ^/favicon.ico /etc.clientlibs/anthem/medicare/clientlibs/clientlib-base/resources/icons/favicon.ico [PT,L]
+
+## Remove forward slash from URL -- Akamai redirect will take precedence over this rule
+RewriteCond %{REQUEST_URI} !^/apps
+RewriteCond %{REQUEST_URI} !^/bin
+RewriteCond %{REQUEST_URI} !^/content
+RewriteCond %{REQUEST_URI} !^/etc
+RewriteCond %{REQUEST_URI} !^/home
+RewriteCond %{REQUEST_URI} !^/libs
+RewriteCond %{REQUEST_URI} !^/saml_login
+RewriteCond %{REQUEST_URI} !^/system
+RewriteCond %{REQUEST_URI} !^/tmp
+RewriteCond %{REQUEST_URI} !^/var
+RewriteCond %{REQUEST_URI} !\.html$
+RewriteCond %{REQUEST_URI} /$
+RewriteRule (.*)/$ https://%{SERVER_NAME}$1 [L,R=301]
+
+## Rules for anthem com CA [Added by HM]
+RewriteCond %{REQUEST_URI} (.html)$
+RewriteRule ^/([a-z]{2})/(.*)$ /content/www/us/en/$1/$2 [PT,L]
+
+## Rules for state pages [Added by HM]
+RewriteRule ^/([a-z]{2})/(.*)$ /content/www/us/en/$1/$2.html [PT,L]
+
+## Rules for anthem com [Added by HM]
+RewriteCond %{REQUEST_URI} !^/apps
+RewriteCond %{REQUEST_URI} !^/bin
+RewriteCond %{REQUEST_URI} !^/content
+RewriteCond %{REQUEST_URI} !^/etc
+RewriteCond %{REQUEST_URI} !^/home
+RewriteCond %{REQUEST_URI} !^/libs
+RewriteCond %{REQUEST_URI} !^/saml_login
+RewriteCond %{REQUEST_URI} !^/system
+RewriteCond %{REQUEST_URI} !^/tmp
+RewriteCond %{REQUEST_URI} !^/var
+RewriteCond %{REQUEST_URI} (.html)$
+RewriteRule ^/(.*)$ /content/www/us/en/home/$1 [PT,L]
+
+## Extensionless URL support [Added by HM]
+RewriteCond %{REQUEST_URI} !^/apps
+RewriteCond %{REQUEST_URI} !^/bin
+RewriteCond %{REQUEST_URI} !^/content
+RewriteCond %{REQUEST_URI} !^/etc
+RewriteCond %{REQUEST_URI} !^/home
+RewriteCond %{REQUEST_URI} !^/libs
+RewriteCond %{REQUEST_URI} !^/saml_login
+RewriteCond %{REQUEST_URI} !^/system
+RewriteCond %{REQUEST_URI} !^/tmp
+RewriteCond %{REQUEST_URI} !^/var
+RewriteRule ^/(.*)$ /content/www/us/en/home/$1.html [PT,L]
+

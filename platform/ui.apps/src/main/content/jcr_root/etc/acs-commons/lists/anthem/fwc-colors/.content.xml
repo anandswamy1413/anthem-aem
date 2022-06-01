@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="cq:Page">
+    <jcr:content jcr:primaryType="nt:unstructured" jcr:title="Color Pallette" sling:resourceType="acs-commons/components/utilities/genericlist">
+        <image jcr:primaryType="nt:unstructured" fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0 jcr:primaryType="nt:unstructured" jcr:title="-- Select Color --" value="/content/dam/anthem/campaign.csv"/>
+            <item1 jcr:primaryType="nt:unstructured" jcr:title="Green" value="#00D795"/>
+            <item2 jcr:primaryType="nt:unstructured" jcr:title="Green 2" value="#3BB273"/>
+            <item3 jcr:primaryType="nt:unstructured" jcr:title="Green 3" value="#108808"/>
+            <item4 jcr:primaryType="nt:unstructured" jcr:title="Purple" value="#511284"/>
+            <item5 jcr:primaryType="nt:unstructured" jcr:title="Red" value="#CB0042"/>
+            <item6 jcr:primaryType="nt:unstructured" jcr:title="Red 2" value="#CB2A73"/>
+            <item7 jcr:primaryType="nt:unstructured" jcr:title="Red 3" value="#FF4D61"/>
+            <item8 jcr:primaryType="nt:unstructured" jcr:title="Red 4" value="#F2BC35"/>
+            <item9 jcr:primaryType="nt:unstructured" jcr:title="Blue" value="#007ea8"/>
+        </list>
+    </jcr:content>
+</jcr:root>

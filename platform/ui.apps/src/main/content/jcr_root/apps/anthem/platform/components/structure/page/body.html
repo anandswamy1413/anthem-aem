@@ -1,0 +1,14 @@
+<sly data-sly-use.pageModel="com.anthem.platform.core.models.AnthemPageModel" 
+	data-sly-use.header_include="header_include.html"
+    data-sly-use.footer_include="footer_include.html">
+ 
+<sly data-sly-call="${header_include.header_include @ pageModel = pageModel}" data-sly-unwrap></sly>
+
+<div data-deep-links="${pageModel.deepLinks}" data-state-list="${pageModel.mailerStateList}" class="main-body">
+    <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
+         data-sly-repeat.child="${templatedContainer.structureResources}"
+         data-sly-resource="${child.path @ resourceType=child.resourceType, decorationTagName='div'}"/>
+</div>
+
+<sly data-sly-call="${footer_include.footer_include @ pageModel = pageModel}" data-sly-unwrap></sly>
+</sly>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="cq:Page">
+    <jcr:content jcr:primaryType="nt:unstructured" jcr:title="Color Pallette" sling:resourceType="acs-commons/components/utilities/genericlist">
+        <image jcr:primaryType="nt:unstructured" fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0 jcr:primaryType="nt:unstructured" jcr:title="-- Select an Icon --" />
+            <item1 jcr:primaryType="nt:unstructured" jcr:title="Angle" value="fwc-icon fwc-icon-angle"/>
+            <item2 jcr:primaryType="nt:unstructured" jcr:title="App Store" value="fwc-icon fwc-icon-app-store"/>
+            <item3 jcr:primaryType="nt:unstructured" jcr:title="Arrow" value="fwc-icon fwc-icon-arrow"/>
+            <item4 jcr:primaryType="nt:unstructured" jcr:title="Arrow Close" value="fwc-icon fwc-icon-arrow-close"/>
+            <item5 jcr:primaryType="nt:unstructured" jcr:title="Bookmark" value="fwc-icon fwc-icon-bookmark"/>
+            <item6 jcr:primaryType="nt:unstructured" jcr:title="Calender" value="fwc-icon fwc-icon-calendar"/>
+            <item7 jcr:primaryType="nt:unstructured" jcr:title="Cancel" value="fwc-icon fwc-icon-cancel"/>
+            <item8 jcr:primaryType="nt:unstructured" jcr:title="Caret Filled" value="fwc-icon fwc-icon-caret-filled"/>
+            <item9 jcr:primaryType="nt:unstructured" jcr:title="Chat" value="fwc-icon fwc-icon-chat"/>
+            <item10 jcr:primaryType="nt:unstructured" jcr:title="Check Wide" value="fwc-icon fwc-icon-check-wide"/>
+            <item11 jcr:primaryType="nt:unstructured" jcr:title="Checkmark" value="fwc-icon fwc-icon-checkmark"/>
+            <item12 jcr:primaryType="nt:unstructured" jcr:title="Delete" value="fwc-icon fwc-icon-delete"/>
+            <item13 jcr:primaryType="nt:unstructured" jcr:title="Double tick" value="fwc-icon fwc-icon-double-tick"/>
+            <item14 jcr:primaryType="nt:unstructured" jcr:title="Email" value="fwc-icon fwc-icon-email"/>
+            <item15 jcr:primaryType="nt:unstructured" jcr:title="Error" value="fwc-icon fwc-icon-error"/>
+            <item16 jcr:primaryType="nt:unstructured" jcr:title="Folder" value="fwc-icon fwc-icon-folder"/>
+            <item17 jcr:primaryType="nt:unstructured" jcr:title="Help" value="fwc-icon fwc-icon-help"/>
+            <item18 jcr:primaryType="nt:unstructured" jcr:title="Info" value="fwc-icon fwc-icon-info"/>
+            <item19 jcr:primaryType="nt:unstructured" jcr:title="Link external" value="fwc-icon fwc-icon-link-external"/>
+            <item20 jcr:primaryType="nt:unstructured" jcr:title="Location" value="fwc-icon fwc-icon-location"/>
+            <item21 jcr:primaryType="nt:unstructured" jcr:title="Notification" value="fwc-icon fwc-icon-notification"/>
+            <item22 jcr:primaryType="nt:unstructured" jcr:title="Phone" value="fwc-icon fwc-icon-phone"/>
+            <item23 jcr:primaryType="nt:unstructured" jcr:title="Restart" value="fwc-icon fwc-icon-restart"/>
+            <item24 jcr:primaryType="nt:unstructured" jcr:title="Search" value="fwc-icon fwc-icon-search"/>
+            <item25 jcr:primaryType="nt:unstructured" jcr:title="Select" value="fwc-icon fwc-icon-select"/>
+            <item26 jcr:primaryType="nt:unstructured" jcr:title="Star" value="fwc-icon fwc-icon-star"/>
+            <item27 jcr:primaryType="nt:unstructured" jcr:title="Trash" value="fwc-icon fwc-icon-trash"/>
+            <item28 jcr:primaryType="nt:unstructured" jcr:title="Circle Check" value="fwc-icon fwc-icon-circle-check"/>
+            <item29 jcr:primaryType="nt:unstructured" jcr:title="PDF" value="fwc-icon fwc-icon-pdf"/>
+            <item30 jcr:primaryType="nt:unstructured" jcr:title="Clipboard" value="anthem-icon anthem-clipboard-icon"/>
+        </list>
+    </jcr:content>
+</jcr:root>

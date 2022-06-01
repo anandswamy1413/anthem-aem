@@ -1,0 +1,50 @@
+<div id="${properties.id}" class="fwc-col-12 cmp-title-and-description" data-sly-use.template="anthem/anthem-inc/components/authoring/placeholder/v1/templates.html" data-sly-use.titleModel="${'com.anthem.platform.core.models.TitleCtaDescription'}">
+    <h1 data-sly-test="${properties.subheaderRequired}" class="fwc-col-12 cmp-title-and-description__subheader ${properties.subheaderTextColor} ${properties.subheaderFontWeight} ${properties.subheaderLetterSpacing}" data-sly-element="${properties.subheaderType}">
+        <a data-analytics="${properties.subTitleAnalytics}" data-sly-unwrap="${!properties.subheaderLinkURL || cqDesign.subheaderLinkDisabled}" class="cmp-title-and-description__subheader-link" href="${properties.subheaderLinkURL}">${properties.subheaderField}</a
+      >
+    </h1>
+    <h1
+      class="fwc-col-12 cmp-title-and-description__title ${properties.titleTextColor} ${properties.titleFontWeight} ${properties.titleLetterSpacing}"
+      data-sly-element="${properties.type}"
+    >
+      <a data-sly-use.linkChecker="${'com.anthem.platform.core.utils.LinkChecker' @ link=properties.linkURL}"
+        data-sly-unwrap="${!properties.linkURL}"
+        data-analytics="${properties.titleAnalytics}"
+        class="cmp-title-and-description__title-link ${properties.titleTextColor} ${properties.titleFontWeight} ${properties.titleLetterSpacing}"
+        href="${linkChecker.link}"
+        >${properties.titleField}</a
+      >
+    </h1>
+    <div
+      data-sly-test="${properties.descRequired}"
+      class="fwc-col-12 cmp-title-and-description__description ${properties.descTextColor} ${properties.descriptionWeight} ${properties.enableBluebar == 'true'? 'cmp-title-and-description__blue-bar':''}"
+    >
+      ${properties.description @context='html'}
+    </div>
+    <div
+      data-sly-test="${properties.ctaRequired}"
+      class="fwc-col-12 cmp-title-and-description__button-wrapper ${properties.linkAlignment}"
+      data-sly-list.cta="${titleModel.ctaList}"
+    >
+      <a  data-sly-use.linkChecker="${'com.anthem.platform.core.utils.LinkChecker' @ link=cta.ctaLink}"
+        data-sly-test="${!cta.ctaIcon}"
+        data-analytics="${cta.ctaAnalytics}"
+        class="${titleModel.linkTextColor} cmp-title-and-description_link fwc-btn fwc-btn-primary"
+        href="${linkChecker.link}"
+        target="${cta.openCtaInNewTab}"
+        ><span class="cmp-title-and-description_link-text">${cta.ctaLabel}</span></a
+      >
+  
+	  <a data-sly-use.linkChecker="${'com.anthem.platform.core.utils.LinkChecker' @ link=cta.ctaLink}"
+        data-sly-test="${cta.ctaIcon}"
+        data-analytics="${cta.ctaAnalytics}"
+        href="${linkChecker.link}"
+        target="${cta.openCtaInNewTab}"
+        class="cmp-title-and-description__icon-link"
+        >
+        <img class="lazyload-img link-icon" src="${cta.ctaIcon}" alt="${cta.iconAltText}"/>
+        <span class="link-text ${titleModel.linkTextColor}">${cta.ctaLabel}</span>
+      </a>
+</div>
+</div>
+<sly data-sly-call="${template.placeholder @ isEmpty=!properties.titleField}"></sly>

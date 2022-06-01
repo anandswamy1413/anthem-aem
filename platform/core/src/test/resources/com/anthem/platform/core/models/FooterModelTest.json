@@ -1,0 +1,11 @@
+{
+	"footer_model": {
+		"jcr:primaryType": "nt:unstructured",
+		"title": "test title",
+		"zipcode": "654328"
+	}
+}
+
+
+
+

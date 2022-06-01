@@ -1,0 +1,132 @@
+/* Add this class (align-image-right) to (text-imageCont) make image align right*/
+/* Add this class (greyBg) to (text-imageBg) make image align right*/
+
+.text-imageBg {
+  background: #ffffff;
+  margin-bottom: 64px;
+}
+
+.text-imageCont .image-text-disclaimer, .text-imageCont .image-text-disclaimer ~ p {
+    font-size: 0.75rem !important;
+}
+.text-imageBg.greyBg {
+  margin: 0 auto 96px ;
+  background: #f7f7f7;
+  padding: 64px 0;
+}
+.text-imageBg .text-imageCont {
+  display: flex;
+  align-items: center;
+}
+.text-imageBg .text-imageCont.align-image-right {
+  flex-direction: row-reverse;
+}
+.text-imageBg .text-imageCont .img-wrapper {
+  width: 456px;
+  max-height: 592px;
+}
+.text-imageBg .text-imageCont .img-wrapper > img {
+  width: inherit;
+  max-height: inherit;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  box-shadow: 0px 8px 32px 0px rgb(0 0 0 / 10%);
+}
+
+.text-imageBg .text-imageCont .text-wrapper {
+  width: calc(100% - 456px);
+  margin-left: 120px;
+  margin-right: 0;
+}
+
+.text-imageBg .text-imageCont .text-wrapper > h2 {
+  color: #333333;
+  font-size: 2rem;
+  font-family: Bitter;
+  font-weight: 600;
+  line-height: 38px;
+  margin-bottom: 0;
+}
+.text-imageBg .text-imageCont .text-wrapper > p,
+.text-imageBg .text-imageCont .text-wrapper > ul > li,
+.text-imageBg .text-imageCont .text-wrapper > ol > li {
+  color: #333333;
+  font-size: 0.875rem;
+  font-family: Lato;
+  font-weight: normal;
+  line-height: 22px;
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+.text-imageBg .text-imageCont .text-wrapper > ol > li {
+  margin: 0 0 16px 18px;
+}
+
+.text-imageBg .text-imageCont .text-wrapper > p {
+  margin: 16px 0;
+}
+
+.text-imageBg .text-imageCont .text-wrapper > ul,
+.text-imageBg .text-imageCont .text-wrapper > ol {
+  padding: 0 16px;
+  position: relative;
+}
+.text-imageBg .text-imageCont .text-wrapper > ul > li::before {
+  position: absolute;
+  content: "•";
+  color: #cccccc;
+  left: 0;
+}
+.text-imageBg .text-imageCont .text-wrapper > ol > li::before {
+  position: absolute;
+  content: "\e948";
+  color: #54b1a3;
+  left: 0;
+  font-family: "ant-motif-icons" !important;
+  font-size: 1.625rem;
+  line-height: 26px;
+}
+.text-imageBg .text-imageCont.align-image-right .text-wrapper {
+  margin-right: 120px;
+  margin-left: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .text-imageBg .text-imageCont.align-image-right .text-wrapper {
+    margin-right: 30px;
+  }
+  .text-imageBg .text-imageCont .text-wrapper {
+    margin-left: 30px;
+  }
+  .text-imageBg.greyBg {
+    padding: 32px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .text-imageBg {
+    margin-bottom: 48px;
+  }
+  .text-imageBg.greyBg {
+    padding: 48px 0 32px;
+    margin: 48px 0 48px;
+  }
+  .text-imageBg .text-imageCont {
+    flex-direction: column !important;
+  }
+  .text-imageBg .text-imageCont .img-wrapper {
+    width: 100%;
+  }
+  .text-imageBg .text-imageCont .text-wrapper > p {
+    margin: 12px 0px 0px;
+  }
+  .text-imageBg .text-imageCont .text-wrapper > h2 {
+    margin-top: 32px;
+    font-size: 1.75rem;
+    line-height: 34px;
+  }
+  .text-imageBg .text-imageCont .text-wrapper {
+    width: 100%;
+    margin: 0 !important;
+  }
+}

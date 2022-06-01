@@ -1,0 +1,8 @@
+# Put hostnames that would be honored for publish blob matching works.
+www.amerigroup.com
+amerigroup.com
+dev.aem.amerigroup.com
+qa.aem.amerigroup.com
+uat.aem.amerigroup.com
+stage.aem.amerigroup.com
+prod.aem.amerigroup.com

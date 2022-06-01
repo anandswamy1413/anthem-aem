@@ -1,0 +1,29 @@
+# AGP Custom rules
+
+# Content Rules [Added by HM]
+/0801 { /type "allow" /extension '(css|eot|gif|ico|jpeg|jpg|js|gif|pdf|png|svg|swf|ttf|woff|woff2|html)' /path "/content/anthem/*" } 
+/0802 { /type "allow" /extension '(css|eot|gif|ico|jpeg|jpg|js|gif|pdf|png|svg|swf|ttf|woff|woff2|html)' /path "/content/agp/*" } 
+/0803 { /type "allow" /extension "json" /selectors "(model)" /path "/content/anthem/*" }
+/0804 { /type "allow" /extension "json" /selectors "(model)" /path "/content/agp/*" }
+/0805 {/type "allow" /method '(HEAD)' /url "/content/*"}
+
+# Dam Rules [Added by HM]
+/0821 {/type "allow" /method '(GET)' /url "/content/dam/anthem/*"}
+/0822 {/type "allow" /method '(GET)' /url "/content/dam/anthem/*.transform/*"} # Rule for Named transform servlet
+/0823 { /type "allow" /extension '(json|jfif|docx|doc|pdf|xls|xlsx|ppt|pptx)' /path "/content/dam/anthem/*" }  #Additional extensions
+# Dam Rules [Added by HM]
+/0824 {/type "allow" /method '(GET)' /url "/content/dam/agp/*"}
+/0825 {/type "allow" /method '(GET)' /url "/content/dam/agp/*.transform/*"} # Rule for Named transform servlet
+/0826 {/type "allow" /extension '(json|jfif|docx|doc|pdf|xls|xlsx|ppt|pptx)' /path "/content/dam/agp/*" }  # Additional extensions
+
+# Servlet Rules [Added by HM]
+/0831 {/type "allow" /method '(GET|POST)' /url "/content/anthem/*/servlets/*" }
+
+# Miscellaneous Rules [Added by HM]
+/0851 { /type "allow" /url "/content/dam/agp/*/robots.txt" } # SE Crawling
+/0852 { /type "allow" /url "/etc/designs/*" } # Allow brightcove player JS 
+/0853 { /type "allow" /url "/content/*/*.sitemap.xml" }
+/0854 { /type "allow" /url "/content/*/*.sitemapfeed.xml" }
+
+
+

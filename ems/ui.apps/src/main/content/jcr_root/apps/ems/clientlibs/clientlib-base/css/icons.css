@@ -1,0 +1,58 @@
+@font-face {
+  font-family: ant-motif-icons;
+  src: url(/etc.clientlibs/ems/clientlibs/clientlib-fonts/resources/fonts/motif/ant-motif-icons.eot?6o51c8);
+  src: url(/etc.clientlibs/ems/clientlibs/clientlib-fonts/resources/fonts/motif/ant-motif-icons.eot?6o51c8#iefix)
+      format("embedded-opentype"),
+    url(/etc.clientlibs/ems/clientlibs/clientlib-fonts/resources/fonts/motif/ant-motif-icons.ttf?6o51c8)
+      format("truetype"),
+    url(/etc.clientlibs/ems/clientlibs/clientlib-fonts/resources/fonts/motif/ant-motif-icons.woff?6o51c8)
+      format("woff"),
+    url(/etc.clientlibs/ems/clientlibs/clientlib-fonts/resources/fonts/motif/ant-motif-icons.svg?6o51c8#ant-motif-icons)
+      format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+.motif-icon {
+  font-family: ant-motif-icons !important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.motif-delete:before {
+  content: "\e97f";
+}
+.motif-checkmark:before {
+  content: "\e94a";
+}
+.motif-sort-down-filled:before {
+  content: "\eaa9";
+}
+.motif-sort-up-filled:before {
+  content: "\eaad";
+}
+.motif-circle-checked-inverse:before {
+  content: "\eb1e";
+}
+.motif-info:before {
+  content: "\e9f9";
+}
+.motif-marker:before {
+  content: "\ea20";
+}
+.motif-check-wide:before {
+  content: "\eb31";
+}
+.motif-search-1:before {
+  content: "\ea92";
+}
+.motif-checked:before {
+  content: "\e948";
+}
+.motif-high-importance:before {
+  content: "\e9eb";
+}

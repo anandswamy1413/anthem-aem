@@ -1,0 +1,26 @@
+<div class="cmp-fwc-modal" data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+    data-cmp-is="fwc-modal">
+</div>
+<sly data-sly-test.emptyContent="${!properties.ctaText}" />
+<sly data-sly-call="${template.placeholder @ isEmpty=emptyContent}"></sly>
+
+
+	 <fwc-modal
+		id="confirmDelete${properties.modalID}"
+        stop-reset="false"
+        text-header="${properties.modalTitle}"
+        text-primary="${properties.primaryCta}"
+        caller-id="confirmDelete${properties.modalID}Button"
+        text-secondary="${properties.secondaryCta}">
+     </fwc-modal>
+
+	<button class="fwc=button fwc-button-secondary" id="confirmDelete${properties.modalID}Button">${properties.ctaText}</button>
+
+		<script>
+            const confirmDelete${properties.modalID @context='scriptString'} = document.getElementById('confirmDelete${properties.modalID @context='scriptString'}');
+            const confirmDelete${properties.modalID @context='scriptString'}Button = document.getElementById('confirmDelete${properties.modalID @context='scriptString'}Button');
+
+            confirmDelete${properties.modalID @context='scriptString'}Button.addEventListener('click', () => {
+                  $(confirmDelete${properties.modalID @context='scriptString'}).html('<p class="fwc-modal-p">${properties.modalDescription @context='scriptString'}</p>');
+             });
+          </script>

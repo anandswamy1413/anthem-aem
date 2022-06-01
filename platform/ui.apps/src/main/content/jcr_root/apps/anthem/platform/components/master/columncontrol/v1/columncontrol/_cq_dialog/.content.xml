@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Column Control"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[anthem.validation.columncontrol]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <desktop
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Column control attributes"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <properties
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Number of Parsys with columns"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <columns
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                        margin="{Boolean}true">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <column
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <numOfColumns
+															jcr:primaryType="nt:unstructured"
+															sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+															fieldDescription="Click on add to add columns with %"
+															fieldLabel="Click on add to add columns">
+															<field
+																jcr:primaryType="nt:unstructured"
+																sling:resourceType="granite/ui/components/coral/foundation/container"
+																name="./numOfColumns">
+																<items jcr:primaryType="nt:unstructured">
+																	<dropdown
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="granite/ui/components/coral/foundation/form/select"
+																		name="./numOfColumns">
+																		<items jcr:primaryType="nt:unstructured">
+																			<opt1
+																				jcr:primaryType="nt:unstructured"
+																				text="8 %"
+																				value="1"/>
+																			<opt2
+																				jcr:primaryType="nt:unstructured"
+																				text="16 %"
+																				value="2"/>
+																			<opt3
+																				jcr:primaryType="nt:unstructured"
+																				text="25 %"
+																				value="3"/>
+																			<opt4
+																				jcr:primaryType="nt:unstructured"
+																				text="33 %"
+																				value="4"/>
+																			<opt5
+																				jcr:primaryType="nt:unstructured"
+																				text="41 %"
+																				value="5"/>
+																			<opt6
+																				jcr:primaryType="nt:unstructured"
+																				text="50 %"
+																				value="6"/>
+																			<opt7
+																				jcr:primaryType="nt:unstructured"
+																				text="59 %"
+																				value="7"/>
+																			<opt8
+																				jcr:primaryType="nt:unstructured"
+																				text="67 %"
+																				value="8"/>
+																			<opt9
+																				jcr:primaryType="nt:unstructured"
+																				text="75 %"
+																				value="9"/>
+																			<opt10
+																				jcr:primaryType="nt:unstructured"
+																				text="84 %"
+																				value="10"/>
+																			<opt11
+																				jcr:primaryType="nt:unstructured"
+																				text="92 %"
+																				value="11"/>
+																			<opt12
+																				jcr:primaryType="nt:unstructured"
+																				text="100 %"
+																				value="12"/>
+																		</items>
+																	</dropdown>
+																</items>
+															</field>
+													</numOfColumns>
+                                                </items>
+                                            </column>
+                                        </items>
+                                    </columns>
+                                </items>
+                            </properties>
+                            <cpntlayOut
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldDescription="Select layout"
+                                fieldLabel="Component layout"
+                                name="./cpntlayOut">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <adaptive
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Adaptive"
+                                        value="container"/>
+                                    <fluid
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Fluid"
+                                        value="container-fluid"/>
+                                </items>
+                            </cpntlayOut>
+							<paddingTop
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldDescription="Check to apply padding at the top"
+                                name="./paddingTop"
+                                text="Apply padding at the top"
+                                value="column-control-paddingTop"/>
+							<paddingBottom
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldDescription="Check to apply padding at the bottom"
+                                name="./paddingBottom"
+                                text="Apply padding at the bottom"
+                                value="column-control-paddingBottom"/>
+							<paddingLeft
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldDescription="Check to apply padding at the left"
+                                name="./paddingLeft"
+                                text="Apply padding at the left"
+                                value="column-control-paddingLeft"/>
+							<paddingRight
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldDescription="Check to apply padding at the right"
+                                name="./paddingRight"
+                                text="Apply padding at the right"
+                                value="column-control-paddingRight"/>
+							<bgColor
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                checked="{Boolean}false"
+                                fieldLabel="Apply background color?"
+                                name="./bgColor"
+                                uncheckedValue="false"
+                                value="true"/>
+							<demarcationLine
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                checked="{Boolean}false"
+                                fieldLabel="Place demarcation lines?"
+                                name="./demarcationLine"
+                                uncheckedValue="false"
+                                value="true"/>
+                        </items>
+                    </columns>
+                </items>
+            </desktop>
+        </items>
+    </content>
+</jcr:root>

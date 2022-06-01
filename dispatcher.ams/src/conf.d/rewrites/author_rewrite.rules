@@ -1,0 +1,3 @@
+## Allow Fwc Mottif assets url [Added by HM]
+RewriteCond %{REQUEST_URI} ^/fwc-assets
+RewriteRule ^/fwc-assets/(.*)$ /etc.clientlibs/anthem/fe-clientlibs/anthem.com/resources/fwc-assets/$1 [PT,L]

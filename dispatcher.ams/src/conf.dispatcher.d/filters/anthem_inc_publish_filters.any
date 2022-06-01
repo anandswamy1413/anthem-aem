@@ -1,0 +1,19 @@
+# Empire Blue Custom rules
+
+# Content Rules [Added by IK]
+/0601 { /type "allow" /extension '(css|eot|gif|ico|jpeg|jpg|js|gif|pdf|png|svg|swf|ttf|woff|woff2|html)' /path "/content/anthem-inc/*" }
+/0602 { /type "allow" /extension "json" /selectors "(model)" /path "/content/anthem-inc/*" }
+/0603 { /type "allow" /extension '(json)' /path "/content/experience-fragments/*" }
+
+# Dam Rules [Added by IK]
+/0621 {/type "allow" /method '(GET)' /url "/content/dam/anthem-inc/*"}
+/0622 {/type "allow" /method '(GET)' /url "/content/dam/anthem-inc/*.transform/*"} # Rule for Named transform servlet
+/0623 {/type "allow" /extension '(json|jfif|docx|doc|pdf|xls|xlsx|ppt|pptx)' /path "/content/dam/anthem-inc/*" }  # Additional extensions
+
+# Servlet Rules [Added by IK]
+/0631 {/type "allow" /method '(GET|POST)' /url "/content/anthem-inc/*/servlets/*" }
+
+# Miscellaneous Rules [Added by IK]
+/0651 {/type "allow" /url "/content/dam/anthem-inc/*/robots.txt" } # SE Crawling
+/0652 { /type "allow" /url "/etc/designs/*" } # Allow brightcove player JS 
+/0653 { /type "allow" /url "/content/anthem-inc/*.sitemap.xml" }

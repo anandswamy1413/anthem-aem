@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Crop Dimensions"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <list jcr:primaryType="nt:unstructured">
+        	<item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="NONE"
+                value=""/>
+            <item01
+                jcr:primaryType="nt:unstructured"
+                jcr:title="hero_banner_sm"
+                value="hero_banner_sm"/>
+            <item02
+                jcr:primaryType="nt:unstructured"
+                jcr:title="callout_overlay_sm"
+                value="callout_overlay_sm"/>
+            <item03
+                jcr:primaryType="nt:unstructured"
+                jcr:title="card_slider_sm"
+                value="card_slider_sm"/>
+        </list>
+    </jcr:content>
+</jcr:root>

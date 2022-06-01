@@ -1,0 +1,21 @@
+{
+   "data":{
+
+				    	"jcr:primaryType": "nt:unstructured",
+						"jcr:createdBy": "admin",
+						"fileReference": "/content/dam/test/headerlogo.PNG",
+						"telIcon": "/content/dam/test/icon.PNG",
+						"jcr:lastModifiedBy": "admin",
+						"phoneNumber": "12344346656",
+						"telDetails": "(TTY :711)",
+						"altText": "desktop alt text",
+						"mobileCtaText": "Call now",
+						"jcr:created": "Tue Aug 04 2020 12:05:21 GMT+0530",
+						"timingText": "8 a.m. to 8p.m., 5 days a week",
+						"jcr:lastModified": "Tue Aug 11 2020 14:43:41 GMT+0530",
+						"sling:resourceType": "anthem/medicare/components/content/header",
+						"checkBox": "false",
+						"logoUrlPath": "/content/we-retail/us/en/men"
+}
+
+}

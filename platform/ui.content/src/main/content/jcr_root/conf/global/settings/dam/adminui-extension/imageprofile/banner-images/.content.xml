@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    banner="banner_430h,2732,860|banner_262h,2732,524|banner_mobile_320w,640,1100"
+    crop_type="crop_smart"
+    swatch=""
+    usmAmount="1.75"
+    usmMonochrome="0"
+    usmRadius="0.2"
+    usmThreshold="2"/>

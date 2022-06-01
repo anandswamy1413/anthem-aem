@@ -1,0 +1,7 @@
+# Put hostnames that would be honored for publish blob matching works.
+www.anthem.com
+dev.aem.anthem.com
+qa.aem.anthem.com
+uat.aem.anthem.com
+stage.aem.anthem.com
+prod.aem.anthem.com

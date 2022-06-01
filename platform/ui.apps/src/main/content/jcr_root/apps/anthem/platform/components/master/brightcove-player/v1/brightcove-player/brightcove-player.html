@@ -1,0 +1,48 @@
+<sly  data-sly-use.player="${'com.coresecure.brightcove.wrapper.models.VideoPlayer'}">
+    
+    <sly data-sly-test="${!player.ignoreComponentProperties && player.inlineCSS}">
+        <style type="text/css">
+            ${player.inlineCSS @context='html'}
+        </style>
+    </sly>
+
+
+    <div id="${player.containerID}" class="${player.containerClass} brightcove-wrapper-generic">
+        <div id="component-wrap-${player.componentID}" class="brc-align-${player.align}">
+                <sly data-sly-test.showSection="${player.account || player.playerID}">
+                    <div data-sly-test="${showSection}" class="${dropTargetPrefix}brightcove_player md-dropzone-video drop-target-player"
+                         data-emptytext="Add Player Here">
+
+                        <sly data-sly-test="${player.videoID || player.playlistID}">
+                            <div class="player-embed-wrap">
+                                <sly data-sly-include="player-embed.html"/>
+                            </div>
+
+                        </sly>
+                        <sly data-sly-test="${wcmmode.edit}">
+                            <div class="${dropTargetPrefix}brightcove_video cq-video-placeholder cq-block-sm-placeholder md-dropzone-video drop-target-video"
+                                 data-emptytext="Add Media Here"></div>
+                        </sly>
+                    </div>
+                    <sly data-sly-test="${!showSection}">
+                        <sly data-sly-test="${wcmmode.edit}">
+                            <div class="${dropTargetPrefix}brightcove_player cq-video-placeholder cq-block-sm-placeholder md-dropzone-video drop-target-player-empty"
+                                 data-emptytext="Add Player Here"></div>
+                        </sly>
+                    </sly>
+                </sly>
+        </div>
+    </div>
+    <div data-sly-use.wcmInit="/libs/wcm/foundation/components/page/initwcm.js" data-sly-test="${wcmmode.edit}" title="Configure component here" class="cq-Overlay cq-Overlay--component cq-droptarget cq-Overlay--placeholder" style="color: rgba(0,0,0,.3);
+        border-color: rgba(0,0,0,.3);
+        background-color: rgba(255,255,255,.25);
+        border-style: solid;
+        border-width: 0.125rem;
+        margin: -0.125rem;
+        height: 50px;
+        width: 100%;
+        line-height: 2.875rem;
+        font-size: 0.875rem;
+        text-align: center;
+    ">Configure ${player.componentContext.component.title}</div>
+</sly>

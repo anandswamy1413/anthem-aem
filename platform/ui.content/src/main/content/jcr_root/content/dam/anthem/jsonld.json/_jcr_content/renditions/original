@@ -1,0 +1,8 @@
+{
+	  "@context": "http://schema.org",
+	  "@type": "WebPage",
+	  "name": "_jcr(title)",
+	  "url": "https://www.anthem.com/individual-and-family/",
+	  "description": "_jcr(description)"
+
+	}

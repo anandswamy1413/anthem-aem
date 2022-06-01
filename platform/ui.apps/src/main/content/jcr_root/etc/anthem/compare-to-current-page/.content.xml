@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-06-24T13:03:13.687+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/anthem/www-sites/settings/wcm/templates/home-page-template"
+        cq:xfVarientType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Compare To Current Page"
+        sling:resourceType="anthem/www-sites/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <comparetocurrentpage
+                jcr:created="{Date}2021-06-24T13:03:13.686+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-06-24T13:03:13.686+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="anthem/platform/components/content/compareToCurrentPage"/>
+        </root>
+    </jcr:content>
+</jcr:root>

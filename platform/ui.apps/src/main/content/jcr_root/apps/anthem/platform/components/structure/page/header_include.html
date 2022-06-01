@@ -1,0 +1,12 @@
+<template data-sly-template.header_include="${ @ pageModel}">
+<sly data-sly-unwrap>
+    <sly data-sly-test="${!pageModel.headerFragmentPath}">
+        <div data-sly-test="${(wcmmode.edit || wcmmode.preview)}"
+             class="cq-dd-experiencefragment cq-placeholder "
+             data-emptytext="Configure header fragemnt ${emptyTextAppend && ' - '}${emptyTextAppend}">
+        </div>
+    </sly>
+    <sly data-sly-test=${pageModel.headerFragmentPath}
+         data-sly-resource="${@path=pageModel.headerFragmentPath, selectors='content', wcmmode='disabled'}"></sly>
+</sly>
+</template>

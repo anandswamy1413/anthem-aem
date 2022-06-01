@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="anthem-color-pallete"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Blue"
+                value="#0079c2"/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Black"
+                value="#000000"/>
+			<item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="White"
+                value="#FFFFFF"/>
+        </list>
+    </jcr:content>
+</jcr:root>

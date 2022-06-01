@@ -1,0 +1,25 @@
+{
+     "data":{
+     
+
+"jcr:primaryType": "nt:unstructured",
+"jcr:createdBy": "admin",
+"fileReference": "/content/dam/test/headerlogo.PNG",
+"jcr:lastModifiedBy": "admin",
+"telHeroDetails": "tty",
+"altText": "hello",
+"phoneNumberHero": "6476476",
+"jcr:created": "Tue Aug 11 2020 11:32:10 GMT+0530",
+"jcr:lastModified": "Tue Aug 11 2020 11:49:21 GMT+0530",
+"sling:resourceType": "anthem/medicare/components/content/hero",
+"textIsRich": "true",
+"bodyText": "hello body",
+"subText": "sample subtext",
+"mobileFileReference": "/content/dam/test/mobile/headerlogo.PNG",
+"tabletFileReference": "/content/dam/test/tablet/headerlogo.PNG",
+"textColor": "#3f3f3f",
+"tabletAlignText": "text-right",
+"mobileAlignText": "text-center",
+"alignText": "text-left"
+         }
+}

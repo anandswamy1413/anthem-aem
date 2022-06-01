@@ -1,0 +1,139 @@
+<div
+	data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+	data-cmp-is="Header"
+	data-sly-use.headerModel="${'com.anthem.platform.core.models.HeaderModel'}">
+</div>
+<sly
+	data-sly-test.emptyCondition="${!headerModel.fileReference && !headerModel.phoneNumber}" />
+<sly
+	data-sly-call="${template.placeholder @ isEmpty=emptyCondition, classAppend='cmp-header'}"></sly>
+<div>
+
+	<sly data-sly-set.eleName="${'path'}" />
+	<sly data-sly-set.svgStickyMobileFill="${ ['fill=#0079c2']}" />
+	<sly data-sly-set.svgStickyTabletFill="${ ['fill=white']}" />
+	<sly data-sly-set.svgDesktopFill="${ ['fill=#0079c2']}" />
+	<sly data-sly-set.svgTabletFill="${ ['fill=#0079c2']}" />
+
+	<div class="c-header-container-mobile">
+		<div class="container aep-container">
+			<div class="row">
+				<div class="anthem-header">
+					<div class="left-section">
+						<a
+							href="${headerModel.logoUrlPath ? headerModel.logoUrlPath : '#'}"
+							target="${headerModel.checkBox ? '_blank' : '_self'}"
+							aria-label="${headerModel.altText}"> 
+						<img data-nav-context="cta" data-analytics="${properties.analyticsCTAheader}" data-sly-test="${headerModel.fileReference}"
+							class="anthem-logo analytics-anthem-cta" src="${headerModel.fileReference}"
+							alt="${headerModel.altText}" class = "c-logo-mobile" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="c-header-container-tablet">
+		<div class="container aep-container">
+			<div class="row">
+				<div class="anthem-header">
+					<div class="left-section">
+						<img data-nav-context="cta" data-analytics="${properties.analyticsCTAheader}" data-sly-test="${headerModel.fileReference}"
+							class="anthem-logo analytics-anthem-cta" src="${headerModel.fileReference}"
+							alt="Anthem logo" class = "c-logo-tab"/>
+					</div>
+					<div class="right-section">
+						<div class="text-author-tablet">
+							<a class="phone-number-section"
+								href="tel:${headerModel.callingNumber}"> <sly
+									data-sly-use.svgWcmUse="${'com.anthem.platform.core.models.SvgWcmUse' @ svgPath= headerModel.telIcon, eleName=eleName, keyValueEle=svgTabletFill}">
+								<span  data-nav-context="tfn" data-analytics="${properties.analyticsTFN}" alt="call-now" class="phone-icon analytics-anthem-tfn"
+									data-sly-test.isSvg="${svgWcmUse.isSvg}">
+									${svgWcmUse.svgDataPath @ context='unsafe'} </span> <img
+									data-sly-test="${!isSvg}" src="${headerModel.telIcon}"
+									alt="call-now" 
+									class = "phone-icon"/> </sly> 
+									<span  data-nav-context="tfn" data-analytics="${properties.analyticsTFN}" class="anthem-phone-number analytics-anthem-tfn">${headerModel.phoneNumber}</span>&nbsp;
+									<span  data-nav-context="tfn" data-analytics="${properties.analyticsTFN}" class="anthem-tty-number analytics-anthem-tfn">
+									<span>(${'TTY' @ i18n}: </span><span class='detail-num'>${headerModel.telDetails}</span>)</span>
+							</a>
+						</div>
+						<div  class="operation-timings-tablet">
+							${headerModel.timingText}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="c-header-container-desktop navbar">
+		<div class="container aep-container">
+			<div class="header-contents-container">
+				<div class="anthem-header">
+					<div class="left-section">
+						<a
+							href="${headerModel.logoUrlPath ? headerModel.logoUrlPath : '#'}"
+							target="${headerModel.checkBox ? '_blank' : '_self'}"> <img
+							 data-nav-context="cta" data-analytics="${properties.analyticsCTAheader}" data-sly-test="${headerModel.fileReference}" class="anthem-logo analytics-anthem-cta"
+							src="${headerModel.fileReference}" alt="${headerModel.altText}"
+							class = "c-logo-desktop" />
+						</a>
+					</div>
+					<div class="right-section">
+						<div class="text-author-desktop">
+							<a class="phone-number-section"
+								href="tel:${headerModel.callingNumber}"> <sly
+									data-sly-use.svgWcmUse="${'com.anthem.platform.core.models.SvgWcmUse' @ svgPath= headerModel.telIcon, eleName=eleName, keyValueEle=svgDesktopFill}">
+								<span  data-nav-context="tfn" data-analytics="${properties.analyticsTFN}"alt="call-now" class="phone-icon analytics-anthem-tfn"
+									data-sly-test.isSvg="${svgWcmUse.isSvg}">
+									${svgWcmUse.svgDataPath @ context='unsafe'} </span> <img
+									data-sly-test="${!isSvg}" src="${headerModel.telIcon}"
+									alt="call-now" 
+									class = "phone-icon"/> </sly>
+									<span  data-nav-context="tfn" data-analytics="${properties.analyticsTFN}" class="anthem-phone-number analytics-anthem-tfn">${headerModel.phoneNumber}</span>
+									<span  data-nav-context="tfn" data-analytics="${properties.analyticsTFN}" class="anthem-tty-number analytics-anthem-tfn"><span>(${'TTY' @ i18n}: </span><span class='detail-num'>${headerModel.telDetails}</span>)</span>
+								</a>
+							<div  class="operation-timings-desktop">
+								${headerModel.timingText}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<a class="header-sticky-mobile" href="tel:${headerModel.callingNumber}">
+		<div class="call-now-button">
+			<sly
+				data-sly-use.svgWcmUse="${'com.anthem.platform.core.models.SvgWcmUse' @ svgPath= headerModel.telIcon, eleName=eleName, keyValueEle=svgStickyMobileFill}">
+			<span  data-nav-context="tfn" data-analytics="${properties.analyticsTFN}" alt="call-now" class="phone-icon analytics-anthem-tfn"
+				data-sly-test.isSvg="${svgWcmUse.isSvg}">
+				${svgWcmUse.svgDataPath @ context='unsafe'} </span> <img
+				data-sly-test="${!isSvg}" src="${headerModel.telIcon}"
+				alt="call-now"
+				class = "phone-icon"/> </sly>
+			<span  data-nav-context="tfn" data-analytics="${properties.analyticsTFN}" class="button-text analytics-anthem-tfn">${headerModel.mobileCtaText}</span>
+		</div>
+</a>
+
+	<div class="header-sticky-tablet">
+		<div class="text-author-tablet">
+			<a class="phone-number-text" href="tel:${headerModel.callingNumber}">
+				<sly
+					data-sly-use.svgWcmUse="${'com.anthem.platform.core.models.SvgWcmUse' @ svgPath= headerModel.telIcon, eleName=eleName, keyValueEle=svgStickyTabletFill}">
+				<span  data-nav-context="tfn" data-analytics="${properties.analyticsTFN}" alt="call-now" class="phone-icon"
+					data-sly-test.isSvg="${svgWcmUse.isSvg}">
+					${svgWcmUse.svgDataPath @ context='unsafe'} </span> <img
+					data-sly-test="${!isSvg}" src="${headerModel.telIcon}"
+					alt="call-now"
+					class = "phone-icon"/> </sly> <span class="anthem-phone-number"  data-nav-context="tfn" data-analytics="${properties.analyticsTFN}">${headerModel.phoneNumber}</span>
+				<span  data-nav-context="tfn" data-analytics="${properties.analyticsTFN}" class="anthem-tty-number"> <span>(${'TTY' @ i18n}: </span><span class='detail-num'>${headerModel.telDetails}</span>)</span>
+			</a>
+			<div class="operation-timings">
+				${headerModel.timingText}</div>
+		</div>
+	</div>
+</div>

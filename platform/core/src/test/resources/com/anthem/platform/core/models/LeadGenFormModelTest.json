@@ -1,0 +1,44 @@
+{
+	"lead_gen_form": {
+		"jcr:primaryType": "nt:unstructured",
+		"sling:resourceType": "anthem/platform/components/content/lead-gen-form/v1/lead-gen-form",
+		"formHeadline": "Test Headline",
+		"firstNameRequired": "true",
+		"firstNamePlaceholder": "Test Fisrt Name Placeholder",
+		"firstNameErrorMsg": "Test Error Message",
+		"lastNameRequired": "Test last Name",
+		"lastNamePlaceholder": "Test Last Name Placeholder",
+		"lastNameErrorMsg": "Test last name error",
+		"emailRequired": "true",
+		"emailPlaceholder": "Test email Placeholder",
+		"emailErrorMsg": "Test email error",
+		"zipcodeRequired": "true",
+		"zipcodePlaceholder": "Test zipcode Placeholder",
+		"zipcodeErrorMsg": "Test zipcode error",
+		"phoneNumRequired": "true",
+		"phoneNumPlaceholder": "Test phone number Placeholder",
+		"phoneNumErrorMsg": "Test phone error",
+		"countyPlaceholder": "Test county Placeholder",
+		"fieldAdvisoryText": "Test advisory",
+		"stageOneCta": "Test stage 1 cta",
+		"checkboxLabel": "Test checkbox label",
+		"mandatoryFieldError": "Test mandatory error",
+		"systemError": "Test system error",
+		"confirmationMsg": "Test confirmation msg",
+		"legalDisclaimer": "Test legal disclaimer",
+		"phoneNumber": "Test phone number",
+		"telDetails": "Test telephone details",
+		"timingText": "Test timing text",
+		"confirmationMsgAriaText": "aria text",
+		"legalDisclaimerAriaText": "legal aria",
+		"countyRequired": "true",
+		"countyErrorMsg": "Test county error",
+		"olsDeepLink": "Test Link",
+		"olsDefaultLink": "Default Link",
+		"requiredFieldAdvisory": "Required Field"
+	}
+}
+
+
+
+

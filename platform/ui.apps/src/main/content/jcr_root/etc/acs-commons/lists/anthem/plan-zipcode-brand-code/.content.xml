@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Plan Zipcode Brand Code"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="ABC"
+                value="BCC"/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="BCBSGA"
+                value="BCBSGA"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="ABCBS"
+                value="ANTHEM"/>
+            <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="EBCBS"
+                value="EMPBCBS"/>
+            <item4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="EBC"
+                value="EMPBC"/>
+            <item5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="HBLA"
+                value="HBLA"/>
+        </list>
+    </jcr:content>
+</jcr:root>

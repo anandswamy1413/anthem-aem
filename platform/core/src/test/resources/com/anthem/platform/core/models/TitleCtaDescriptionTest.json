@@ -1,0 +1,28 @@
+{
+	"title-cta": {
+		"jcr:primaryType": "nt:unstructured",
+		"sling:resourceType": "anthem/platform/components/block-text/v1/abstract-image",
+		"id":"Id",
+		"titleField":"Title",
+		"type":"Type",
+		"titleFontWeight":"50%",
+		"titleLetterSpacing":"true",
+		"titleTextColor":"red",
+		"linkURL":"content/dam/anthem/platform/demo",
+		"descRequired":"true",
+		"enableBluebar":"true",
+		"description":"Description",
+		"descriptionWeight":"20%",
+		"descTextColor":"White",
+		"linkTextColor":"Black",
+		"ctaIcon":"content/dam/anthem/platform/icon.png",
+		"ctaLabel":"CTA Label",
+		"ctaLink":"content/dam/anthem/platform/demo",
+		"ctaAnalytics":"CTA Analytics",
+		"openCtaInNewTab":"New Tab"
+	}
+}
+
+
+
+

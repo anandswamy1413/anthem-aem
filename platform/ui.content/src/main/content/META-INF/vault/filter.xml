@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+	<filter root="/conf/anthem/settings"/>
+	<filter root="/conf/anthem/akamai"/>
+    <filter root="/conf/anthem/platform">
+    	<exclude pattern="/conf/anthem/platform/settings/cloudconfigs/(.*)"/>
+    </filter>
+    <filter root="/content/anthem/jcr:content/servlets" mode="update"/>
+	<filter root="/content/dam/anthem" mode="merge"/>
+
+	<filter root="/conf/anthem/servlets" mode="update"/>
+	<filter root="/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes" mode="merge"/>
+	<filter root="/conf/global/settings/dam/adminui-extension/imageprofile" mode="merge"/>
+	<filter root="/conf/global/settings/dam/adminui-extension/metadataschema/anthem-inc"/>
+	<filter root="/content/cq:tags/esearch" mode="merge"/>
+	
+	<filter root="/var/workflow/models/anthem/platform"/>
+	<filter root="/var/workflow/models/request_for_activation.xml"/>
+	
+	<filter root="/conf/global/settings/workflow/models/anthem/platform"/>
+	<filter root="/conf/global/settings/workflow/models/request_for_activation"/> 
+    <!-- <filter root="/content/anthem/platform" mode="merge"/>
+    <filter root="/conf/anthem/platform" mode="merge"/> 
+    <filter root="/content/dam/anthem/platform" mode="merge"/>
+    <filter root="/content/experience-fragments/platform" mode="merge"/>  --> 
+</workspaceFilter>
