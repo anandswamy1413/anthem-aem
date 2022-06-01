@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
-    jcr:primaryType="rep:SystemUser"
-    jcr:uuid="36faf93d-5bea-3b59-97d9-e8895e5c6b95"
-    rep:authorizableId="anthemReadWriteUser"
-    rep:principalName="anthemReadWriteUser"
-    memberAction="memberOf"
-    memberEntry="administrators"/>

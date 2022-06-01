@@ -1,4 +1,0 @@
-
-icons.css 
-style.css
-rte.css

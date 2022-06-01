@@ -1,3 +1,0 @@
-# Put hostnames that would be honored for publish blob matching works.
-"${PUBLISH_DEFAULT_HOSTNAME}/{/content/anthemai/*}"
-"${PUBLISH_DEFAULT_HOSTNAME}/{/content/anthemai/en/*}"

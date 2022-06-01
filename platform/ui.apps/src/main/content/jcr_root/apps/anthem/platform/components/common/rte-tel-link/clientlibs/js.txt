@@ -1,2 +1,0 @@
-rteinserthtml.js
-RTE.CQTelPlugin.js

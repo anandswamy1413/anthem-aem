@@ -1,9 +1,0 @@
-<div class="cmp-fwc-alert" data-sly-use.template="core/wcm/components/commons/v1/templates.html"
-    data-cmp-is="fwc-alert">
-</div>
-<sly data-sly-test.emptyContent="${!properties.alertMsg}" />
-<sly data-sly-call="${template.placeholder @ isEmpty=emptyContent}"></sly>
-
-
-<fwc-alert type="${properties.alertType}" message="${properties.alertMsg}" id="${properties.alertType}Alert"></fwc-alert>
-

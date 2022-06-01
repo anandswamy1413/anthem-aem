@@ -1,7 +1,0 @@
-{
-	"deep_links": {
-		"jcr:primaryType": "nt:unstructured",
-		"paramName": "param name",
-		"paramValue": "param value"
-	}
-}

@@ -1,3 +1,0 @@
-#base=js
-
-akamai.js

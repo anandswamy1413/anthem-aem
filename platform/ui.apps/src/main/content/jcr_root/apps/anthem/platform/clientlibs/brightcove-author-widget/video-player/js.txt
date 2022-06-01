@@ -1,3 +1,0 @@
-#base=js
-
-video_dropdown.js

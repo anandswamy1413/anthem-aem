@@ -1,3 +1,0 @@
-#base=js
-
-grid-setting.js

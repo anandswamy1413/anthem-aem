@@ -1,3 +1,0 @@
-#base=js
-
-playlist_dropdown.js
